@@ -1,0 +1,1285 @@
+<!DOCTYPE html>
+<html lang="english">
+  <head>
+    <title>exported project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta property="twitter:card" content="summary_large_image" />
+
+    <style data-tag="reset-style-sheet">
+      html {
+        line-height: 1.15;
+      }
+      body {
+        margin: 0;
+      }
+      * {
+        box-sizing: border-box;
+        border-width: 0;
+        border-style: solid;
+        -webkit-font-smoothing: antialiased;
+      }
+      p,
+      li,
+      ul,
+      pre,
+      div,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6,
+      figure,
+      blockquote,
+      figcaption {
+        margin: 0;
+        padding: 0;
+      }
+      button {
+        background-color: transparent;
+      }
+      button,
+      input,
+      optgroup,
+      select,
+      textarea {
+        font-family: inherit;
+        font-size: 100%;
+        line-height: 1.15;
+        margin: 0;
+      }
+      button,
+      select {
+        text-transform: none;
+      }
+      button,
+      [type="button"],
+      [type="reset"],
+      [type="submit"] {
+        -webkit-appearance: button;
+        color: inherit;
+      }
+      button::-moz-focus-inner,
+      [type="button"]::-moz-focus-inner,
+      [type="reset"]::-moz-focus-inner,
+      [type="submit"]::-moz-focus-inner {
+        border-style: none;
+        padding: 0;
+      }
+      button:-moz-focus,
+      [type="button"]:-moz-focus,
+      [type="reset"]:-moz-focus,
+      [type="submit"]:-moz-focus {
+        outline: 1px dotted ButtonText;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      input {
+        padding: 2px 4px;
+      }
+      img {
+        display: block;
+      }
+      details {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      [data-thq="accordion"] [data-thq="accordion-content"] {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-in-out;
+        padding: 0;
+      }
+      [data-thq="accordion"]
+        details[data-thq="accordion-trigger"][open]
+        + [data-thq="accordion-content"] {
+        max-height: 1000vh;
+      }
+      details[data-thq="accordion-trigger"][open]
+        summary
+        [data-thq="accordion-icon"] {
+        transform: rotate(180deg);
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+    <style data-tag="default-style-sheet">
+      html {
+        font-family: Inter;
+        font-size: 16px;
+      }
+
+      body {
+        margin: 0;
+      }
+
+      body {
+        font-weight: 400;
+        font-style: normal;
+        text-decoration: none;
+        text-transform: none;
+        letter-spacing: normal;
+        line-height: 1.15;
+        color: var(--dl-color-theme-neutral-dark);
+        background: var(--dl-color-theme-neutral-light);
+
+        fill: var(--dl-color-theme-neutral-dark);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/animate.css@4.1.1/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand:wght@400&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
+      data-tag="font" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@teleporthq/teleport-custom-scripts/dist/style.css" />
+  </head>
+  <body>
+    <link rel="stylesheet" href="./style.css" />
+    <div>
+      <link href="./index.css" rel="stylesheet" />
+
+      <div class="landing-page4-container">
+        <div class="landing-page4-landing-page4">
+          <div class="landing-page4-home1">
+            <div class="landing-page4-frame272"></div>
+            <div class="landing-page4-frame178"></div>
+            <img
+              src="public/external/rectangle513010-yu0f-1100w.png"
+              alt="Rectangle513010"
+              class="landing-page4-rectangle51" />
+            <div class="landing-page4heading">
+              <div class="landing-page4-group691">
+                <div class="landing-page4-group82">
+                  <img
+                    src="public/external/home6317-6h3-200h.png"
+                    alt="Home6317"
+                    class="landing-page4-home2" />
+                </div>
+                <div class="landing-page4-frame278">
+                  <div class="landing-page4-frame277">
+                    <div class="landing-page4-frame276"></div>
+                    <div class="landing-page4-frame871">
+                      <div class="landing-page4-twitter11">
+                        <div class="landing-page4-clippathgroup1">
+                          <div class="landing-page4-clip066101">
+                            <img
+                              src="public/external/vector3010-068l.svg"
+                              alt="Vector3010"
+                              class="landing-page4-vector10" />
+                          </div>
+                          <div class="landing-page4-group1">
+                            <img
+                              src="public/external/vector3010-tblo.svg"
+                              alt="Vector3010"
+                              class="landing-page4-vector11" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="landing-page4-facebook11">
+                        <div class="landing-page4-clippathgroup2">
+                          <div class="landing-page4-clip06621">
+                            <img
+                              src="public/external/vector3010-58cf.svg"
+                              alt="Vector3010"
+                              class="landing-page4-vector12" />
+                          </div>
+                          <div class="landing-page4-group2">
+                            <img
+                              src="public/external/vector3011-vg5b.svg"
+                              alt="Vector3011"
+                              class="landing-page4-vector13" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="landing-page4-instagram11">
+                        <div class="landing-page4-clippathgroup3">
+                          <div class="landing-page4-clip06651">
+                            <img
+                              src="public/external/vector3011-xt5m.svg"
+                              alt="Vector3011"
+                              class="landing-page4-vector14" />
+                          </div>
+                          <div class="landing-page4-group3">
+                            <img
+                              src="public/external/vector3011-vc0m.svg"
+                              alt="Vector3011"
+                              class="landing-page4-vector15" />
+                            <img
+                              src="public/external/vector3011-lrl8.svg"
+                              alt="Vector3011"
+                              class="landing-page4-vector16" />
+                            <img
+                              src="public/external/vector3011-vm8.svg"
+                              alt="Vector3011"
+                              class="landing-page4-vector17" />
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="landing-page4-frame275">
+                    <span class="landing-page4-text100">
+                      <span class="landing-page4-text101">Elevate</span>
+                      <span class="landing-page4-text102">your</span>
+                      <span>workout</span>
+                    </span>
+                    <span class="landing-page4-text104">
+                      <span class="landing-page4-text105">No</span>
+                      <span class="landing-page4-text106">PAIN</span>
+                      <span class="landing-page4-text107">No</span>
+                      <span class="landing-page4-text108">GAIN.</span>
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <img
+                src="public/external/vector3011-y8m.svg"
+                alt="Vector3011"
+                class="landing-page4-vector18" />
+              <div class="landing-page4-profileand-navigation1">
+                <div class="landing-page4-food-drinkutensilsalt1"></div>
+              </div>
+            </div>
+            <div class="landing-page4-group84">
+              <img
+                src="public/external/pin6235-zgdb-200w.png"
+                alt="Pin6235"
+                class="landing-page4-pin10" />
+            </div>
+            <div class="landing-page4feedback">
+              <img
+                src="public/external/ellipse7003011-oc7-200h.png"
+                alt="Ellipse7003011"
+                class="landing-page4-ellipse700" />
+              <img
+                src="public/external/chat3011-9i0o-200w.png"
+                alt="Chat3011"
+                class="landing-page4-chat" />
+            </div>
+            <div class="landing-page4-profileand-navigation2">
+              <div class="landing-page4-group59">
+                <img
+                  src="public/external/vector3011-ew2.svg"
+                  alt="Vector3011"
+                  class="landing-page4-vector19" />
+              </div>
+              <div class="landing-page4-food-drinkutensilsalt2"></div>
+            </div>
+            <span class="landing-page4-text109">HOME</span>
+            <span class="landing-page4-text110">BMI CALCULATOR</span>
+            <span class="landing-page4-text111">PINNED WORKOUTS</span>
+          </div>
+          <div class="landing-page4-frame2nd-page">
+            <div class="landing-page4-searchbar">
+              <div class="landing-page4-searchfield">
+                <div class="landing-page4-actions-u-isearch">
+                  <img
+                    src="public/external/union3011-m1vo.svg"
+                    alt="Union3011"
+                    class="landing-page4-union" />
+                </div>
+                <span class="landing-page4-text112">Search for Workouts</span>
+              </div>
+            </div>
+            <button class="landing-page4-seachbutton1"></button>
+            <button class="landing-page4seachbutton1">
+              <span class="landing-page4-text113">Search</span>
+            </button>
+
+            <button class="landing-page4-seachbutton2"></button>
+            <button class="landing-page4seachbutton2">
+              <span class="landing-page4-text114">ADVANCE SEARCH</span>
+            </button>
+
+            <div class="landing-page4-group72">
+              <div class="landing-page4-easyvid1">
+                <div class="landing-page4easyvid1">
+                  <div class="landing-page4-image-base10">
+                    <img
+                      src="public/external/photoimageimagei301-zfhe.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image10" />
+                  </div>
+                  <div class="landing-page4-video-time1">
+                    <span class="landing-page4-text115">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3011-atb8-200h.png"
+                    alt="CircledPlay3011"
+                    class="landing-page4-circled-play1" />
+                  <div class="landing-page4-text-badge10">
+                    <span class="landing-page4-text116">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty1">
+                    <span class="landing-page4-text117">EASY</span>
+                  </div>
+                  <div class="landing-page4-text-badge11">
+                    <span class="landing-page4-text118">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge12">
+                    <span class="landing-page4-text119">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge13">
+                    <span class="landing-page4-text120">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge14">
+                    <span class="landing-page4-text121">TAG</span>
+                  </div>
+                  <span class="landing-page4-text122">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text127">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text128">DURATION:</span>
+                  <img
+                    src="public/external/pin3011-ifsb-200w.png"
+                    alt="Pin3011"
+                    class="landing-page4-pin11" />
+                </div>
+              </div>
+              <div class="landing-page4-easyvid2">
+                <div class="landing-page4easyvid2">
+                  <div class="landing-page4-image-base11">
+                    <img
+                      src="public/external/photoimageimagei301-2dwy.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image11" />
+                  </div>
+                  <div class="landing-page4-video-time2">
+                    <span class="landing-page4-text129">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3011-o3l5-200h.png"
+                    alt="CircledPlay3011"
+                    class="landing-page4-circled-play2" />
+                  <div class="landing-page4-text-badge15">
+                    <span class="landing-page4-text130">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty2">
+                    <span class="landing-page4-text131">EASY</span>
+                  </div>
+                  <div class="landing-page4-text-badge16">
+                    <span class="landing-page4-text132">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge17">
+                    <span class="landing-page4-text133">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge18">
+                    <span class="landing-page4-text134">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge19">
+                    <span class="landing-page4-text135">TAG</span>
+                  </div>
+                  <span class="landing-page4-text136">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text141">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text142">DURATION:</span>
+                  <img
+                    src="public/external/pin3011-pzmc-200w.png"
+                    alt="Pin3011"
+                    class="landing-page4-pin12" />
+                </div>
+              </div>
+              <div class="landing-page4-easyvid3">
+                <div class="landing-page4easyvid3">
+                  <div class="landing-page4-image-base12">
+                    <img
+                      src="public/external/photoimageimagei301-04bs.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image12" />
+                  </div>
+                  <div class="landing-page4-video-time3">
+                    <span class="landing-page4-text143">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3012-slih-200h.png"
+                    alt="CircledPlay3012"
+                    class="landing-page4-circled-play3" />
+                  <div class="landing-page4-text-badge20">
+                    <span class="landing-page4-text144">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge21">
+                    <span class="landing-page4-text145">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty3">
+                    <span class="landing-page4-text146">EASY</span>
+                  </div>
+                  <div class="landing-page4-text-badge22">
+                    <span class="landing-page4-text147">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge23">
+                    <span class="landing-page4-text148">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge24">
+                    <span class="landing-page4-text149">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge25">
+                    <span class="landing-page4-text150">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge26">
+                    <span class="landing-page4-text151">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge27">
+                    <span class="landing-page4-text152">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge28">
+                    <span class="landing-page4-text153">TAG</span>
+                  </div>
+                  <span class="landing-page4-text154">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text159">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text160">DURATION:</span>
+                  <img
+                    src="public/external/pin3012-ufqe-200w.png"
+                    alt="Pin3012"
+                    class="landing-page4-pin13" />
+                </div>
+              </div>
+            </div>
+            <div class="landing-page4-group71">
+              <div class="landing-page4-mediumvid1">
+                <div class="landing-page4mediumvid1">
+                  <img
+                    src="public/external/pin3012-5zrx-200w.png"
+                    alt="Pin3012"
+                    class="landing-page4-pin14" />
+                  <div class="landing-page4-image-base13">
+                    <img
+                      src="public/external/photoimageimagei301-j4n.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image13" />
+                  </div>
+                  <div class="landing-page4-video-time4">
+                    <span class="landing-page4-text161">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3012-755e-200h.png"
+                    alt="CircledPlay3012"
+                    class="landing-page4-circled-play4" />
+                  <div class="landing-page4-text-badge29">
+                    <span class="landing-page4-text162">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge30">
+                    <span class="landing-page4-text163">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty4">
+                    <span class="landing-page4-text164">MEDIUM</span>
+                  </div>
+                  <div class="landing-page4-text-badge31">
+                    <span class="landing-page4-text165">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge32">
+                    <span class="landing-page4-text166">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge33">
+                    <span class="landing-page4-text167">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge34">
+                    <span class="landing-page4-text168">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge35">
+                    <span class="landing-page4-text169">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge36">
+                    <span class="landing-page4-text170">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge37">
+                    <span class="landing-page4-text171">TAG</span>
+                  </div>
+                  <span class="landing-page4-text172">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text177">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text178">DURATION:</span>
+                </div>
+              </div>
+              <div class="landing-page4-mediumvid2">
+                <div class="landing-page4mediumvid2">
+                  <img
+                    src="public/external/pin3012-6ew1i-200w.png"
+                    alt="Pin3012"
+                    class="landing-page4-pin15" />
+                  <div class="landing-page4-image-base14">
+                    <img
+                      src="public/external/photoimageimagei301-l02.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image14" />
+                  </div>
+                  <div class="landing-page4-video-time5">
+                    <span class="landing-page4-text179">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3012-l3s-200h.png"
+                    alt="CircledPlay3012"
+                    class="landing-page4-circled-play5" />
+                  <div class="landing-page4-text-badge38">
+                    <span class="landing-page4-text180">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge39">
+                    <span class="landing-page4-text181">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty5">
+                    <span class="landing-page4-text182">MEDIUM</span>
+                  </div>
+                  <div class="landing-page4-text-badge40">
+                    <span class="landing-page4-text183">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge41">
+                    <span class="landing-page4-text184">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge42">
+                    <span class="landing-page4-text185">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge43">
+                    <span class="landing-page4-text186">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge44">
+                    <span class="landing-page4-text187">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge45">
+                    <span class="landing-page4-text188">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge46">
+                    <span class="landing-page4-text189">TAG</span>
+                  </div>
+                  <span class="landing-page4-text190">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text195">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text196">DURATION:</span>
+                </div>
+              </div>
+              <div class="landing-page4-mediumvid3">
+                <div class="landing-page4mediumvid3">
+                  <img
+                    src="public/external/pin3012-thun-200w.png"
+                    alt="Pin3012"
+                    class="landing-page4-pin16" />
+                  <div class="landing-page4-image-base15">
+                    <img
+                      src="public/external/photoimageimagei301-e62i.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image15" />
+                  </div>
+                  <div class="landing-page4-video-time6">
+                    <span class="landing-page4-text197">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3013-q35-200h.png"
+                    alt="CircledPlay3013"
+                    class="landing-page4-circled-play6" />
+                  <div class="landing-page4-text-badge47">
+                    <span class="landing-page4-text198">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge48">
+                    <span class="landing-page4-text199">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty6">
+                    <span class="landing-page4-text200">MEDIUM</span>
+                  </div>
+                  <div class="landing-page4-text-badge49">
+                    <span class="landing-page4-text201">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge50">
+                    <span class="landing-page4-text202">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge51">
+                    <span class="landing-page4-text203">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge52">
+                    <span class="landing-page4-text204">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge53">
+                    <span class="landing-page4-text205">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge54">
+                    <span class="landing-page4-text206">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge55">
+                    <span class="landing-page4-text207">TAG</span>
+                  </div>
+                  <span class="landing-page4-text208">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text213">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text214">DURATION:</span>
+                </div>
+              </div>
+            </div>
+            <div class="landing-page4-frame10648">
+              <div class="landing-page4-group70">
+                <div class="landing-page4intermediatevid1">
+                  <img
+                    src="public/external/pin3013-h2w-200w.png"
+                    alt="Pin3013"
+                    class="landing-page4-pin17" />
+                  <div class="landing-page4-image-base16">
+                    <img
+                      src="public/external/photoimageimagei301-1sg.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image16" />
+                  </div>
+                  <div class="landing-page4-video-time7">
+                    <span class="landing-page4-text215">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3013-yiid-200h.png"
+                    alt="CircledPlay3013"
+                    class="landing-page4-circled-play7" />
+                  <div class="landing-page4-text-badge56">
+                    <span class="landing-page4-text216">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge57">
+                    <span class="landing-page4-text217">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty7">
+                    <span class="landing-page4-text218">INTERMEDIATE</span>
+                  </div>
+                  <div class="landing-page4-text-badge58">
+                    <span class="landing-page4-text219">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge59">
+                    <span class="landing-page4-text220">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge60">
+                    <span class="landing-page4-text221">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge61">
+                    <span class="landing-page4-text222">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge62">
+                    <span class="landing-page4-text223">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge63">
+                    <span class="landing-page4-text224">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge64">
+                    <span class="landing-page4-text225">TAG</span>
+                  </div>
+                  <span class="landing-page4-text226">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text231">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text232">DURATION:</span>
+                </div>
+                <div class="landing-page4intermediatevid2">
+                  <img
+                    src="public/external/pin3013-v1fw-200w.png"
+                    alt="Pin3013"
+                    class="landing-page4-pin18" />
+                  <div class="landing-page4-image-base17">
+                    <img
+                      src="public/external/photoimageimagei301-b82.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image17" />
+                  </div>
+                  <div class="landing-page4-video-time8">
+                    <span class="landing-page4-text233">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3013-4ao-200h.png"
+                    alt="CircledPlay3013"
+                    class="landing-page4-circled-play8" />
+                  <div class="landing-page4-text-badge65">
+                    <span class="landing-page4-text234">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge66">
+                    <span class="landing-page4-text235">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty8">
+                    <span class="landing-page4-text236">INTERMEDIATE</span>
+                  </div>
+                  <div class="landing-page4-text-badge67">
+                    <span class="landing-page4-text237">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge68">
+                    <span class="landing-page4-text238">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge69">
+                    <span class="landing-page4-text239">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge70">
+                    <span class="landing-page4-text240">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge71">
+                    <span class="landing-page4-text241">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge72">
+                    <span class="landing-page4-text242">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge73">
+                    <span class="landing-page4-text243">TAG</span>
+                  </div>
+                  <span class="landing-page4-text244">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text249">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text250">DURATION:</span>
+                </div>
+                <div class="landing-page4intermediatevid3">
+                  <img
+                    src="public/external/pin3013-wnjd-200w.png"
+                    alt="Pin3013"
+                    class="landing-page4-pin19" />
+                  <div class="landing-page4-image-base18">
+                    <img
+                      src="public/external/photoimageimagei301-wdtg.svg"
+                      alt="PhotoImageImageI301"
+                      class="landing-page4-photo-image-image18" />
+                  </div>
+                  <div class="landing-page4-video-time9">
+                    <span class="landing-page4-text251">23:45</span>
+                  </div>
+                  <img
+                    src="public/external/circledplay3013-70xj-200h.png"
+                    alt="CircledPlay3013"
+                    class="landing-page4-circled-play9" />
+                  <div class="landing-page4-text-badge74">
+                    <span class="landing-page4-text252">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge75">
+                    <span class="landing-page4-text253">TAG</span>
+                  </div>
+                  <div class="landing-page4difficulty9">
+                    <span class="landing-page4-text254">INTERMEDIATE</span>
+                  </div>
+                  <div class="landing-page4-text-badge76">
+                    <span class="landing-page4-text255">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge77">
+                    <span class="landing-page4-text256">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge78">
+                    <span class="landing-page4-text257">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge79">
+                    <span class="landing-page4-text258">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge80">
+                    <span class="landing-page4-text259">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge81">
+                    <span class="landing-page4-text260">TAG</span>
+                  </div>
+                  <div class="landing-page4-text-badge82">
+                    <span class="landing-page4-text261">TAG</span>
+                  </div>
+                  <span class="landing-page4-text262">
+                    <br />
+                    <span>Lorem ipsum dolor sit amet, consecte</span>
+                    <br />
+                    <span>adipiscing elit.</span>
+                  </span>
+                  <span class="landing-page4-text267">1 - 1 MINUTE</span>
+                  <span class="landing-page4-text268">DURATION:</span>
+                </div>
+              </div>
+            </div>
+            <div class="landing-page4-pagination">
+              <div class="landing-page4-frame10646">
+                <img
+                  src="public/external/arrowschevronlefti301-7u9l.svg"
+                  alt="ArrowschevronleftI301"
+                  class="landing-page4-arrowschevronleft1" />
+              </div>
+              <div class="landing-page4-pages">
+                <div class="landing-page4-frame-page1"></div>
+                <div class="landing-page4-frame-page2"></div>
+                <div class="landing-page4-frame-page3"></div>
+                <div class="landing-page4-frame-page4">
+                  <span class="landing-page4-text269 PatrickHandBody">...</span>
+                </div>
+                <div class="landing-page4-frame-page5"></div>
+              </div>
+              <div class="landing-page4-frame10647">
+                <img
+                  src="public/external/arrowschevronrighti301-gz2i.svg"
+                  alt="ArrowschevronrightI301"
+                  class="landing-page4-arrowschevronright1" />
+              </div>
+            </div>
+            <div class="landing-page4-group73">
+              <div class="landing-page4bodycategory1">
+                <div class="landing-page4-image-base19">
+                  <img
+                    src="public/external/photoimageimagei301-rt5r.svg"
+                    alt="PhotoImageImageI301"
+                    class="landing-page4-photo-image-image19" />
+                </div>
+                <span class="landing-page4-text270">Cardio</span>
+              </div>
+              <div class="landing-page4bodycategory2">
+                <div class="landing-page4-image-base20">
+                  <img
+                    src="public/external/photoimageimagei301-6hvr.svg"
+                    alt="PhotoImageImageI301"
+                    class="landing-page4-photo-image-image20" />
+                </div>
+                <span class="landing-page4-text271">Biceps</span>
+              </div>
+              <div class="landing-page4bodycategory3">
+                <div class="landing-page4-image-base21">
+                  <img
+                    src="public/external/photoimageimagei301-2o6.svg"
+                    alt="PhotoImageImageI301"
+                    class="landing-page4-photo-image-image21" />
+                </div>
+                <span class="landing-page4-text272">Back</span>
+              </div>
+              <div class="landing-page4bodycategory4">
+                <div class="landing-page4-image-base22">
+                  <img
+                    src="public/external/photoimageimagei301-oq3q.svg"
+                    alt="PhotoImageImageI301"
+                    class="landing-page4-photo-image-image22" />
+                </div>
+                <span class="landing-page4-text273">All</span>
+              </div>
+            </div>
+            <button class="landing-page4-button1">
+              <img
+                src="public/external/arrowschevronlefti301-izrj.svg"
+                alt="ArrowschevronleftI301"
+                class="landing-page4-arrowschevronleft2" />
+              <span class="landing-page4-text274 PatrickHandBody">Prev</span>
+            </button>
+            <button class="landing-page4-button2">
+              <span class="landing-page4-text275 PatrickHandBody">Next</span>
+              <img
+                src="public/external/arrowschevronrighti301-zb5r.svg"
+                alt="ArrowschevronrightI301"
+                class="landing-page4-arrowschevronright2" />
+            </button>
+            <div class="landing-page4-group74">
+              <img
+                src="public/external/rectangle543014-2hr9.svg"
+                alt="Rectangle543014"
+                class="landing-page4-rectangle54" />
+              <div class="landing-page4majortags">
+                <div class="landing-page4seachtag1">
+                  <span class="landing-page4-text276">Type</span>
+                </div>
+                <div class="landing-page4seachtag2">
+                  <span class="landing-page4-text277">DIfficulty</span>
+                </div>
+                <div class="landing-page4seachtag3">
+                  <span class="landing-page4-text278">Duration</span>
+                </div>
+                <div class="landing-page4seachtag4">
+                  <span class="landing-page4-text279">Muscle</span>
+                </div>
+                <div class="landing-page4seachtag5">
+                  <span class="landing-page4-text280">Equipment</span>
+                </div>
+              </div>
+              <div class="landing-page4-tagscheckandremove">
+                <div class="landing-page4-text-badge83">
+                  <img
+                    src="public/external/actionsuicheck3014-7s7.svg"
+                    alt="ActionsUIcheck3014"
+                    class="landing-page4-actions-u-icheck10" />
+                  <span class="landing-page4-text281">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid10">
+                    <img
+                      src="public/external/subtract3014-m58c.svg"
+                      alt="Subtract3014"
+                      class="landing-page4-subtract10" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge84">
+                  <img
+                    src="public/external/actionsuicheck3014-tcgu.svg"
+                    alt="ActionsUIcheck3014"
+                    class="landing-page4-actions-u-icheck11" />
+                  <span class="landing-page4-text282">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid11">
+                    <img
+                      src="public/external/subtract3014-tum.svg"
+                      alt="Subtract3014"
+                      class="landing-page4-subtract11" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge85">
+                  <img
+                    src="public/external/actionsuicheck3014-nj0o.svg"
+                    alt="ActionsUIcheck3014"
+                    class="landing-page4-actions-u-icheck12" />
+                  <span class="landing-page4-text283">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid12">
+                    <img
+                      src="public/external/subtract3014-1p6c.svg"
+                      alt="Subtract3014"
+                      class="landing-page4-subtract12" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge86">
+                  <img
+                    src="public/external/actionsuicheck3014-boua.svg"
+                    alt="ActionsUIcheck3014"
+                    class="landing-page4-actions-u-icheck13" />
+                  <span class="landing-page4-text284">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid13">
+                    <img
+                      src="public/external/subtract3014-857j.svg"
+                      alt="Subtract3014"
+                      class="landing-page4-subtract13" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge87">
+                  <img
+                    src="public/external/actionsuicheck3015-l3f.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck14" />
+                  <span class="landing-page4-text285">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid14">
+                    <img
+                      src="public/external/subtract3015-zuel.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract14" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge88">
+                  <img
+                    src="public/external/actionsuicheck3015-cyfh.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck15" />
+                  <span class="landing-page4-text286">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid15">
+                    <img
+                      src="public/external/subtract3015-8l9p.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract15" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge89">
+                  <img
+                    src="public/external/actionsuicheck3015-1hl4.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck16" />
+                  <span class="landing-page4-text287">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid16">
+                    <img
+                      src="public/external/subtract3015-mm6h.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract16" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge90">
+                  <img
+                    src="public/external/actionsuicheck3015-t6y9.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck17" />
+                  <span class="landing-page4-text288">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid17">
+                    <img
+                      src="public/external/subtract3015-iw5.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract17" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge91">
+                  <img
+                    src="public/external/actionsuicheck3015-dzdl.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck18" />
+                  <span class="landing-page4-text289">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid18">
+                    <img
+                      src="public/external/subtract3015-4nqr.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract18" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge92">
+                  <img
+                    src="public/external/actionsuicheck3015-82058.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck19" />
+                  <span class="landing-page4-text290">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid19">
+                    <img
+                      src="public/external/subtract3015-z8bd.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract19" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge93">
+                  <img
+                    src="public/external/actionsuicheck3015-6iin.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck20" />
+                  <span class="landing-page4-text291">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid20">
+                    <img
+                      src="public/external/subtract3015-12j.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract20" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge94">
+                  <img
+                    src="public/external/actionsuicheck3015-di0n.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck21" />
+                  <span class="landing-page4-text292">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid21">
+                    <img
+                      src="public/external/subtract3015-okiw.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract21" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge95">
+                  <img
+                    src="public/external/actionsuicheck3015-p4gl.svg"
+                    alt="ActionsUIcheck3015"
+                    class="landing-page4-actions-u-icheck22" />
+                  <span class="landing-page4-text293">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid22">
+                    <img
+                      src="public/external/subtract3015-57h.svg"
+                      alt="Subtract3015"
+                      class="landing-page4-subtract22" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge96">
+                  <img
+                    src="public/external/actionsuicheck3016-7c5.svg"
+                    alt="ActionsUIcheck3016"
+                    class="landing-page4-actions-u-icheck23" />
+                  <span class="landing-page4-text294">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid23">
+                    <img
+                      src="public/external/subtract3016-8u4g.svg"
+                      alt="Subtract3016"
+                      class="landing-page4-subtract23" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge97">
+                  <img
+                    src="public/external/actionsuicheck3016-gyel.svg"
+                    alt="ActionsUIcheck3016"
+                    class="landing-page4-actions-u-icheck24" />
+                  <span class="landing-page4-text295">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid24">
+                    <img
+                      src="public/external/subtract3016-7w8l.svg"
+                      alt="Subtract3016"
+                      class="landing-page4-subtract24" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge98">
+                  <img
+                    src="public/external/actionsuicheck3016-nypn.svg"
+                    alt="ActionsUIcheck3016"
+                    class="landing-page4-actions-u-icheck25" />
+                  <span class="landing-page4-text296">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid25">
+                    <img
+                      src="public/external/subtract3016-puor.svg"
+                      alt="Subtract3016"
+                      class="landing-page4-subtract25" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge99">
+                  <img
+                    src="public/external/actionsuicheck3016-9fb8.svg"
+                    alt="ActionsUIcheck3016"
+                    class="landing-page4-actions-u-icheck26" />
+                  <span class="landing-page4-text297">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid26">
+                    <img
+                      src="public/external/subtract3016-79hi.svg"
+                      alt="Subtract3016"
+                      class="landing-page4-subtract26" />
+                  </div>
+                </div>
+                <div class="landing-page4-text-badge100">
+                  <img
+                    src="public/external/actionsuicheck3016-cgbq.svg"
+                    alt="ActionsUIcheck3016"
+                    class="landing-page4-actions-u-icheck27" />
+                  <span class="landing-page4-text298">TAG</span>
+                  <div class="landing-page4-actions-u-iclearxsolid27">
+                    <img
+                      src="public/external/subtract3016-mkyd.svg"
+                      alt="Subtract3016"
+                      class="landing-page4-subtract27" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="landing-page4-footer">
+            <img
+              src="public/external/rectangle533016-xe4-1600h.png"
+              alt="Rectangle533016"
+              class="landing-page4-rectangle53" />
+            <div class="landing-page4-group692">
+              <span class="landing-page4-text299 BodyMediumMedium-16">
+                Buy Us a Coffee
+              </span>
+            </div>
+            <img
+              src="public/external/vector3016-fgb.svg"
+              alt="Vector3016"
+              class="landing-page4-vector20" />
+            <div class="landing-page4-frame273">
+              <div class="landing-page4-frame872">
+                <div class="landing-page4-twitter12">
+                  <div class="landing-page4-clippathgroup4">
+                    <div class="landing-page4-clip066102">
+                      <img
+                        src="public/external/vector3016-7xi.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector21" />
+                    </div>
+                    <div class="landing-page4-group4">
+                      <img
+                        src="public/external/vector3016-51m.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector22" />
+                    </div>
+                  </div>
+                </div>
+                <div class="landing-page4-facebook12">
+                  <div class="landing-page4-clippathgroup5">
+                    <div class="landing-page4-clip06622">
+                      <img
+                        src="public/external/vector3016-go07.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector23" />
+                    </div>
+                    <div class="landing-page4-group5">
+                      <img
+                        src="public/external/vector3016-bux.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector24" />
+                    </div>
+                  </div>
+                </div>
+                <div class="landing-page4-instagram12">
+                  <div class="landing-page4-clippathgroup6">
+                    <div class="landing-page4-clip06652">
+                      <img
+                        src="public/external/vector3016-qecs.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector25" />
+                    </div>
+                    <div class="landing-page4-group6">
+                      <img
+                        src="public/external/vector3016-v5i.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector26" />
+                      <img
+                        src="public/external/vector3016-ez6f.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector27" />
+                      <img
+                        src="public/external/vector3016-xz8l.svg"
+                        alt="Vector3016"
+                        class="landing-page4-vector28" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
