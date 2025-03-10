@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="english">
+<html lang="engl</html></html>ish">
   <head>
     <title>exported project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -12,6 +12,8 @@
       }
       body {
         margin: 0;
+        display: flex;
+        flex-direction: column;
       }
       * {
         box-sizing: border-box;
@@ -107,18 +109,24 @@
         [data-thq="accordion-icon"] {
         transform: rotate(180deg);
       }
-      html {
+      html,
+      body {
         scroll-behavior: smooth;
+        height: 100%;
       }
     </style>
     <style data-tag="default-style-sheet">
-      html {
+      html,
+      body {
         font-family: Inter;
         font-size: 16px;
       }
 
-      body {
+      body,
+      html {
         margin: 0;
+        padding: 0;
+        height: 100%;
       }
 
       body {
@@ -132,6 +140,24 @@
         background: var(--dl-color-theme-neutral-light);
 
         fill: var(--dl-color-theme-neutral-dark);
+      }
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+      }
+      *,
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      .landing-page4-container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
       }
     </style>
     <link
@@ -333,16 +359,20 @@
               </div>
               <div class="landing-page4-food-drinkutensilsalt2"></div>
             </div>
-            <span class="landing-page4-text109">HOME</span>
-            <span class="landing-page4-text110">BMI CALCULATOR</span>
-            <span class="landing-page4-text111">PINNED WORKOUTS</span>
+            <a href="index.html" class="landing-page4-text109">HOME</a>
+            <a href="#bmi-calculator" class="landing-page4-text110"
+              >BMI CALCULATOR</a
+            >
+            <a href="#pinned-workouts" class="landing-page4-text111"
+              >PINNED WORKOUTS</a
+            >
           </div>
           <div class="landing-page4-frame2nd-page">
             <div class="landing-page4-searchbar">
               <div class="landing-page4-searchfield">
                 <div class="landing-page4-actions-u-isearch">
                   <img
-                    src="public/external/union3011-m1vo.svg"
+                    src="public/external/u</div>nion3011-m1vo.svg"
                     alt="Union3011"
                     class="landing-page4-union" />
                 </div>
@@ -356,7 +386,7 @@
 
             <button class="landing-page4-seachbutton2"></button>
             <button class="landing-page4seachbutton2">
-              <span class="landing-page4-text114">ADVANCE SEARCH</span>
+              <span class="advance-search-button">ADVANCE SEARCH</span>
             </button>
 
             <div class="landing-page4-group72">
@@ -393,7 +423,7 @@
                   <div class="landing-page4-text-badge14">
                     <span class="landing-page4-text121">TAG</span>
                   </div>
-                  <span class="landing-page4-text122">
+                  <span class="landing-page4-text</div>122">
                     <br />
                     <span>Lorem ipsum dolor sit amet, consecte</span>
                     <br />

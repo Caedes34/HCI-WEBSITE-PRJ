@@ -4,44 +4,6 @@ body {
   font-family: "Rubik", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-}
-
-header {
-  background-color: #111111;
-  color: #fff;
-  padding: 10px 0;
-  text-align: center;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #222;
-}
-
-nav a {
-  color: #fff;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  background-color: #444;
-}
-
-nav a {
-  color: #fff;
-  padding: 14px 20px;
-  text-decoration: none;
-  text-align: center;
-}
-
-nav a:hover {
-  background-color: #555;
 }
 
 main {
@@ -51,10 +13,57 @@ main {
 footer {
   background-color: #111111;
   font-family: "Rubik", sans-serif;
-  color: #fff;
   text-align: center;
   padding: 10px 0;
-  position: fixed;
+  position: bottom;
   width: 100%;
+  height: 50px;
   bottom: 0;
+}
+.logo {
+  max-width: 100px;
+  height: auto;
+  float: left;
+  margin-right: 15px;
+  width: 190px;
+  display: block;
+  object-fit: contain;
+}
+
+.Footer-logo {
+  max-width: 100px;
+  height: auto;
+  float: left;
+  margin-top: 5px;
+  margin-right: 10px;
+  margin-left: 40px;
+  width: 190px;
+  display: block;
+  object-fit: contain;
+}
+.advance-button {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #ffd900;
+  color: black;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+  i {
+    font-size: 20px;
+  }
+}
+.advance-button:active {
+  transform: scale(0.95);
+}
+.search-button {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #9ebae0;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
 }
