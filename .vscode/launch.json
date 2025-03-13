@@ -17,5 +17,13 @@
       "name": "Open Homepage.html",
       "file": "C:\\Program Projects\\HCI WEBSITE PROJECT\\HOMEPAGE.html"
     }
+
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open slider.html",
+      "file": "C:\\Program Projects\\HCI WEBSITE PROJECT\\slider.html"
+    }
   ]
+  
 }
