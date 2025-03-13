@@ -8,11 +8,10 @@ const totalItems = document.querySelectorAll(".category-btn").length;
 const totalPages = Math.ceil(totalItems / itemsPerPage);
 
 function updateSlider() {
-  const offset = -currentIndex * 100; // Moves left/right
+  const offset = -currentIndex * 100;
   categories.style.transform = `translateX(${offset}%)`;
 }
 
-// Next Button
 nextBtn.addEventListener("click", () => {
   if (currentIndex < totalPages - 1) {
     currentIndex++;
@@ -20,7 +19,6 @@ nextBtn.addEventListener("click", () => {
   }
 });
 
-// Prev Button
 prevBtn.addEventListener("click", () => {
   if (currentIndex > 0) {
     currentIndex--;

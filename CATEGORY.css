@@ -2,14 +2,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
+  margin-top: 50px;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
 .category-slider {
-  width: 500px; /* Adjust width as needed */
+  width: 1235px;
   overflow: hidden;
   position: relative;
 }
@@ -17,13 +18,14 @@
 .categories {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  gap: 10px;
-  height: 190px;
+  gap: 20px;
+  height: 100%;
+  width: 100%;
 }
 
 .category-btn {
-  width: 90px;
-  height: 90px;
+  width: 233px;
+  height: 291px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,21 +34,20 @@
   background: none;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  font-size: 40px;
+  padding: 58px;
+  margin-top: 50px;
 }
 
 .category-btn img {
-  width: 120px;
-  height: 100px;
+  width: 110px;
+  height: auto;
 }
 
 .category-btn:hover {
   transform: scale(1.1);
 }
-.category-btn {
-  font-size: 40px; /* Increase font size */
-  padding: 58px; /* Increase padding */
-  margin-top: 50px;
-}
+
 .nav-btn {
   background: none;
   border: none;
@@ -57,19 +58,18 @@
 }
 
 .nav-btn:hover {
-  background: lightgray;
+  transform: scale(1.1);
 }
 
-/*button size*/
 .CA {
-  width: 120px;
-  height: 100px;
+  width: 200px;
+  height: 200px;
   border: none;
   background-color: #f1f1f1;
   cursor: pointer;
 }
-/*image sizes*/
+
 .category-btn img {
-  width: 120px;
-  height: 130px; /* Adjusted height for image; ensure correct aspect ratio */
+  width: 200px;
+  height: auto;
 }

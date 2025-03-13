@@ -108,14 +108,19 @@
           width: 300px;
         " />
       <!--customize the size of the img button advance search picture-->
-
+      <button class="search-button">
+        <img
+          src="ASSETS/SEACH BUTTON (1).png"
+          style="width: 100px; height: 45px" />
+      </button>
       <button class="advanced-button">
         <img
-          src="ASSETS/search button.png"
-          style="width: 120px; height: 30px"
+          src="ASSETS/advance button.png"
+          style="width: 150px; height: 40px"
           onclick="toggleFilters()" />
       </button>
       <!-- Hidden filter tags -->
+      <!--put the hidden filter tag at the bottom of the search input-->
       <div class="filters" id="filterContainer" style="display: none">
         <span class="filter-tag" onclick="selectTag(this)">Cardio</span>
         <span class="filter-tag" onclick="selectTag(this)">Strength</span>
@@ -127,7 +132,9 @@
 
     <section>
       <div class="category-container">
-        <button id="prevBtn" class="nav-btn">◀</button>
+        <button id="prevBtn" class="nav-btn">
+          <img src="ASSETS/PREV BUTTON.png" />
+        </button>
         <div class="category-slider">
           <div class="categories">
             <button class="category-btn">
@@ -150,10 +157,15 @@
             </button>
           </div>
         </div>
-        <button id="nextBtn" class="nav-btn">▶</button>
+        <button id="nextBtn" class="nav-btn">
+          <img src="ASSETS/NEXT BUTTON.png" />
+        </button>
       </div>
     </section>
-    <section></section>
+    <!-- Corrected closing tag for the section -->
+    <section>
+      <h1>Workout Categories</h1>
+    </section>
 
     <footer>
       <img src="ASSETS/logo.png" alt="Footer Logo" class="Footer-logo" />
