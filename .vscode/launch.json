@@ -1,0 +1,21 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open Thumbnail.html",
+      "file": "c:\\Program Projects\\HCI WEBSITE PROJECT\\Thumbnail.html"
+    }
+
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open Homepage.html",
+      "file": "C:\\Program Projects\\HCI WEBSITE PROJECT\\HOMEPAGE.html"
+    }
+  ]
+}

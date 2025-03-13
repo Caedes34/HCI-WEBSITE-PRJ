@@ -6,23 +6,20 @@
   background-size: cover;
   margin-top: 50px;
   padding-top: 15px;
-  border-radius: 10px;
 }
-
 .thumbnail img {
   width: 250px;
   height: 200px;
   object-fit: cover;
-  border: 2px solid #fff;
+  padding-left: 25px;
+  padding-right: 25px;
+  border-radius: 20px;
 }
 .thumbnail-play-container {
   position: absolute;
-  top: 45%;
-  left: 80%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  width: 45px;
-  height: 45px;
-  background: rgba(0, 0, 0, 0.5);
   border-radius: 60%;
   display: flex;
   justify-content: center;
@@ -30,7 +27,165 @@
   cursor: pointer;
 }
 .thumbnail-play-container img {
-  width: 50px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  border-radius: 20px;
+}
+.thumbnail {
+  position: relative;
+  width: 300px; /* Adjust based on your layout */
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.thumbnail-image {
+  width: 100%;
+  display: block;
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 50%; /* Move it slightly up */
+  right: 30px; /* Position at the right */
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.thumbnail-play-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+}
+
+.thumbnail-play {
+  width: 50px;
+}
+
+.thumbnail-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  padding: 10px;
+  color: black;
+  font-family: Arial, sans-serif;
+}
+
+.thumbnail-tags {
+  font-size: 12px;
+  opacity: 0.8;
+
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.thumbnail-title {
+  font-family: Rubik, sans-serif;
+  font-size: 25px;
+  margin: 5px 0;
+  font-weight: bold;
+  white-space: nowrap;
+  padding-top: 30px;
+  padding-right: 80px;
+}
+
+.thumbnail-duration {
+  font-weight: bold;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  width: fit-content;
+  padding-right: 10px;
+  margin-left: 5px;
+  margin-bottom: 6px;
+}
+.thumbnail-difficulty {
+  font-weight: bold;
+  background-color: red;
+  width: fit-content;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 15px;
+  white-space: nowrap;
+  margin-left: 3px;
+}
+
+.thumbnail-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail-image {
+  border-radius: 10px;
+}
+
+.tag1 {
+  background-color: #ff6347; /* Default background (Tomato) */
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px; /* Rounded edges */
+  font-weight: bold;
+  white-space: nowrap; /* Prevents text from breaking */
+}
+
+.tag2 {
+  background-color: #ff6347; /* Default background (Tomato) */
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px; /* Rounded edges */
+  font-weight: bold;
+  white-space: nowrap; /* Prevents text from breaking */
+}
+.tag3 {
+  background-color: #ff6347; /* Default background (Tomato) */
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px; /* Rounded edges */
+  font-weight: bold;
+  white-space: nowrap; /* Prevents text from breaking */
+}
+.tag4 {
+  background-color: #ff6347; /* Default background (Tomato) */
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 15px; /* Rounded edges */
+  font-weight: bold;
+  white-space: nowrap; /* Prevents text from breaking */
+}
+.Thumbnail-SET-1 {
+  display: flex; /* Enables horizontal alignment */
+  justify-content: center; /* Centers items */
+  gap: 60px; /* Space between thumbnails */
+}
+.Thumbnail-SET-2 {
+  display: flex; /* Enables horizontal alignment */
+  justify-content: center; /* Centers items */
+  gap: 60px; /* Space between thumbnails */
+}
+
+.Thumbnail-SET-3 {
+  display: flex; /* Enables horizontal alignment */
+  justify-content: center; /* Centers items */
+  gap: 60px; /* Space between thumbnails */
+}
+
+.Thumbnail-SET-4 {
+  display: flex; /* Enables horizontal alignment */
+  justify-content: center; /* Centers items */
+  gap: 60px; /* Space between thumbnails */
 }

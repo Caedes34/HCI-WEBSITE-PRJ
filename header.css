@@ -1,15 +1,18 @@
 header {
-  padding: 1px 0;
-  text-align: center;
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  height: 80px;
-  display: flex;
-  align-items: center;
-  background-color: #1e1e1e;
-  padding-left: 400px;
+  background-color: rgba(0, 0, 0, 0.8); /* Adjust for visibility */
+  padding: 15px 0;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000; /* Ensures it stays above other elements */
 }
+
+.hidden-header {
+  transform: translateY(-100%); /* Moves the header out of view */
+}
+
 
 nav {
   display: flex;
