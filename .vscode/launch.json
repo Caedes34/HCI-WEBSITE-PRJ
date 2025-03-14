@@ -30,6 +30,13 @@
       "request": "launch",
       "name": "Open BMI CALCULATOR.html",
       "file": "C:\\Program Projects\\HCI WEBSITE PROJECT\\BMI CALCULATOR.html"
+    },
+
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open Pinned Workouts.html",
+      "file": "C:\\Program Projects\\HCI WEBSITE PROJECT\\PinnedWorkouts.html"
     }
   ]
   

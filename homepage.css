@@ -22,13 +22,17 @@ footer {
   bottom: 0;
 }
 .logo {
-  max-width: 100px;
   height: auto;
   float: left;
-  margin-right: 15px;
-  width: 190px;
+  margin-left: 40px;
+  margin-top: 10px;
   display: block;
   object-fit: contain;
+  position: absolute;
+}
+.logo img {
+  width: 100%;
+  height: 100%;
 }
 
 .Footer-logo {
