@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="BMI CALCULATOR.css" />
+    <link rel="stylesheet" href="Calculator.css" />
+    <script src="Calculator.js" defer></script>
+    <script src="HEADER.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- Logo (Positioned to the Left) -->
+      <img
+        src="ASSETS/logo.png"
+        alt="Logo"
+        class="logo"
+        style="height: 50px; position: absolute; left: 50px" />
+
+      <!-- Navigation Links (Centered) -->
+      <nav>
+        <ul class="nav-links">
+          <li
+            class="nav-home"
+            style="margin: 0 20px; display: flex; align-items: center">
+            <a
+              href="HOMEPAGE.html"
+              style="
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+              ">
+              <img
+                src="ASSETS/Home.png"
+                alt="Home Icon"
+                style="margin-right: 5px" />
+              HOME
+            </a>
+          </li>
+          <li
+            class="nav-bmi"
+            style="margin: 0 20px; display: flex; align-items: center">
+            <a
+              href="BMI CALCULATOR.html"
+              style="
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+              ">
+              <img
+                src="ASSETS/BMI CALCULATOR.png"
+                alt="BMI Calculator Icon"
+                style="margin-right: 5px" />
+              BMI CALCULATOR
+            </a>
+          </li>
+          <li
+            class="nav-pinned"
+            style="margin: 0 20px; display: flex; align-items: center">
+            <a
+              href="ASSETS/pinned_workouts.html"
+              style="
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+              ">
+              <img
+                src="ASSETS/Pinned workouts.png"
+                alt="Pinned Workouts Icon"
+                style="margin-right: 5px" />
+              PINNED WORKOUTS
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+
+    
+
+    <div class="container">
+      <div class="box">
+        <h1>BMI Calculator</h1>
+        <div class="content">
+          <div class="input">
+            <label for="height">Age</label>
+            <input
+              type="text"
+              class="text-input"
+              id="age"
+              autocomplete="off"
+              required />
+          </div>
+
+          <div class="gender">
+            <label class="container">
+              <input type="radio" name="radio" id="m" />
+              <p class="text">Male</p>
+              <span class="checkmark"></span>
+            </label>
+
+            <label class="container">
+              <input type="radio" name="radio" id="f" />
+              <p class="text">Female</p>
+              <span class="checkmark"></span>
+            </label>
+          </div>
+
+          <div class="containerHW">
+            <div class="inputH">
+              <label for="height">Height(cm)</label>
+              <input type="number" id="height" required />
+            </div>
+
+            <div class="inputW">
+              <label for="weight">Weight(kg)</label>
+              <input type="number" id="weight" required />
+            </div>
+          </div>
+
+          <button class="calculate" id="submit" onclick="calculate();">
+            Calculate BMI
+          </button>
+        </div>
+        <div class="result">
+          <p>Your BMI is</p>
+          <div id="result">00.00</div>
+          <p class="comment"></p>
+        </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="modalText"></p>
+      </div>
+    </div>
+
+    <footer>
+      <img src="ASSETS/logo.png" alt="Footer Logo" class="Footer-logo" />
+    </footer>
+  </body>
+</html>

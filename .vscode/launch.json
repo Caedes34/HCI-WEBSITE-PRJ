@@ -24,6 +24,13 @@
       "name": "Open slider.html",
       "file": "C:\\Program Projects\\HCI WEBSITE PROJECT\\slider.html"
     }
+
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open BMI CALCULATOR.html",
+      "file": "C:\\Program Projects\\HCI WEBSITE PROJECT\\BMI CALCULATOR.html"
+    }
   ]
   
 }
