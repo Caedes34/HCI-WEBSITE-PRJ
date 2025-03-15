@@ -1,0 +1,78 @@
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Button Styling */
+.ad {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Pop-up Modal */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  border-radius: 8px;
+}
+
+/* Overlay (to dim background) */
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* Close Button */
+.close-btn {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  float: right;
+
+  transition: background-color 0.3s;
+}
+
+.Workout-checkboxes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-filterset {
+  background-color: #f0f0f0;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 10px 0;
+  width: fit-content;
+  display: inline-block;
+}
+.second-filterset {
+  background-color: #f0f0f0;
+  border-radius: 14px;
+  padding: 20px;
+  margin: 10px 0;
+  width: fit-content;
+  display: inline-block;
+}

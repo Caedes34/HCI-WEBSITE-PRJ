@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="Advance search.css" />
+    <script src="Advance search.js"></script>
+  </head>
+  <body>
+    <div
+      style="
+        margin: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      ">
+      <input
+        type="text"
+        placeholder="Search for workouts..."
+        style="
+          padding: 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          width: 300px;
+        " />
+      <!--customize the size of the img button advance search picture-->
+      <button class="search-button">
+        <img
+          src="ASSETS/SEACH BUTTON (1).png"
+          style="width: 100px; height: 45px" />
+      </button>
+      <button class="advanced-button">
+        <img
+          src="ASSETS/Advance Filters.png"
+          style="width: 150px; height: 40px"
+          onclick="toggleFilters()" />
+      </button>
+
+      <div class="filters" id="filterContainer" style="display: flexbox">
+        <span class="filter-tag" onclick="selectTag(this)">Cardio</span>
+        <span class="filter-tag" onclick="selectTag(this)">Strength</span>
+        <span class="filter-tag" onclick="selectTag(this)">Beginner</span>
+        <span class="filter-tag" onclick="selectTag(this)">Intermediate</span>
+        <span class="filter-tag" onclick="selectTag(this)">Advanced</span>
+      </div>
+    </div>
+  </body>
+</html>

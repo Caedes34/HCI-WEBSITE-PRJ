@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Filters Pop-up</title>
+    <link rel="stylesheet" href="advancebutton.css" />
+    <script src="advancebutton.js"></script>
+    <script src="duration.js"></script>
+  </head>
+  <body>
+    <div>
+      <button class="advanced-button" onclick="openModal()">
+        Advanced Filters
+      </button>
+
+      <div class="advanced-button" id="overlay" onclick="closeModal()"></div>
+
+      <!-- Pop-up Modal -->
+      <div class="modal" id="modal">
+        <button class="close-btn" onclick="closeModal()">X</button>
+        <h2>Advanced Filters</h2>
+        <div class="first-filterset">
+          <p>Workout Type:</p>
+          <div class="Workout-checkboxes">
+            <label> <input type="checkbox" /> Strength </label>
+            <br />
+            <label> <input type="checkbox" /> Cardio </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 3 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 4 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 5 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 6 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 7 </label>
+            <br />
+          </div>
+        </div>
+
+        <label for="duration">Duration: 1 min </label>
+        <input
+          type="range"
+          id="duration"
+          name="duration"
+          min="5"
+          max="60"
+          step="2"
+          value="30" />
+        <span id="durationValue">30 min</span>
+
+        <div class="second-filterset">
+          <p>Difficulty:</p>
+          <div class="Workout-checkboxes">
+            <label> <input type="checkbox" /> EASY </label>
+            <br />
+            <label> <input type="checkbox" /> Medium </label>
+            <br />
+            <label> <input type="checkbox" /> Intermediate </label>
+            <br />
+          </div>
+        </div>
+
+        <div class="first-filterset">
+          <p>Muscle Group:</p>
+          <div class="Workout-checkboxes">
+            <label> <input type="checkbox" /> Filter 1 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 2 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 3 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 4 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 5 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 6 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 7 </label>
+            <br />
+          </div>
+        </div>
+
+        <div class="first-filterset">
+          <p>Goal:</p>
+          <div class="Workout-checkboxes">
+            <label> <input type="checkbox" /> Filter 1 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 2 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 3 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 4 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 5 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 6 </label>
+            <br />
+            <label> <input type="checkbox" /> Filter 7 </label>
+            <br />
+          </div>
+        </div>
+        <button class="open-btn" onclick="closeModal()">Apply Filters</button>
+        <button class="open-btn" onclick="resetFilters()">RESET</button>
+      </div>
+    </div>
+  </body>
+</html>
