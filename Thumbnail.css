@@ -15,30 +15,14 @@
 }
 .thumbnail img {
   width: 250px;
-  height: 200px;
+  height: 250px; /* real size*/
   object-fit: cover;
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 20px;
   transition: transform 0.3s ease-in-out;
 }
-.thumbnail-play-container {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  border-radius: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.thumbnail-play-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 20px;
-}
+
 .thumbnail {
   position: relative;
   width: 300px; /* Adjust based on your layout */
@@ -52,16 +36,31 @@
   display: block;
 }
 
-.video-duration {
+.PIN-ICON {
   position: absolute;
-  bottom: 50%; /* Move it slightly up */
-  right: 30px; /* Position at the right */
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
-  color: white;
-  padding: 5px 10px;
-  font-size: 14px;
+  bottom: 5px; /* Aligns it near the bottom */
+  right: 8px; /* Aligns it near the right */
+  padding: 5px 25px; /* Adjusted padding */
+  font-size: 12px; /* Smaller text size */
   font-weight: bold;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px; /* Adjusted size */
+  height: 30px;
+}
+
+.PIN-ICON img {
+  width: 100%; /* Adjust size of the icon */
+  height: 100%;
+}
+.PIN-ICON button {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  cursor: pointer;
 }
 
 .thumbnail-play-container {
@@ -93,15 +92,15 @@
 .thumbnail-tags {
   font-size: 12px;
   opacity: 0.8;
-
   display: flex;
   gap: 5px;
   flex-wrap: wrap;
+  padding-top: 50px; /*adjust the others*/
 }
 
 .thumbnail-title {
   font-family: Rubik, sans-serif;
-  font-size: 25px;
+  font-size: 20px;
   margin: 5px 0;
   font-weight: bold;
   white-space: nowrap;
@@ -121,7 +120,7 @@
 }
 .thumbnail-difficulty {
   font-weight: bold;
-  background-color: red;
+  background-color: darkblue;
   width: fit-content;
   color: white;
   padding: 5px 10px;

@@ -1,7 +1,7 @@
 // API URL for exercises (example: waist exercises)
-const API_URL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/waist";
+const API_URL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/cardio";
 
-// API Headers (Replace with your API key)
+// API Headers
 const options = {
   method: "GET",
   headers: {
@@ -14,32 +14,34 @@ const options = {
 async function fetchExerciseGifs() {
   try {
     const response = await fetch(API_URL, options);
-    const data = await response.json(); // Convert response to JSON
+    const data = await response.json();
 
-    // Get all images with class "thumbnail-image"
-    const images = document.querySelectorAll(".thumbnail-image");
+    // Get all thumbnail containers
+    const thumbnails = document.querySelectorAll(".thumbnail");
 
     if (data.length === 0) {
       console.error("No exercises found in the API response.");
       return;
     }
 
-    // Loop through images and assign GIFs
-    images.forEach((img, index) => {
-      const thumbnail = img.closest(".thumbnail"); // Get the closest thumbnail container
-      const titleElement = thumbnail.querySelector(".thumbnail-title"); // Get the title element
+    thumbnails.forEach(async (thumbnail, index) => {
+      if (!data[index]) return;
 
-      if (data[index] && data[index].gifUrl) {
-        img.src = data[index].gifUrl; // Assign a GIF to each image
-        titleElement.textContent = data[index].name;
-      } else {
-        console.warn(`No GIF found for index ${index}, skipping...`);
-      }
+      const img = thumbnail.querySelector(".thumbnail-image");
+      const titleElement = thumbnail.querySelector(".thumbnail-title");
+
+      // Set title and GIF from ExerciseDB API
+      img.src = data[index].gifUrl;
+      titleElement.textContent = data[index].name;
+
+      // Fetch difficulty and instructions from API-Ninjas API
     });
   } catch (error) {
     console.error("Error fetching exercise GIFs:", error);
   }
 }
 
-// Run the function after page loads
+// Function to fetch difficulty & instructions from API-Ninjas
+
+// Run the function after the page loads
 document.addEventListener("DOMContentLoaded", fetchExerciseGifs);
