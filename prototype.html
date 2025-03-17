@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Thumbnail</title>
+    <style>
+      .thumbnail {
+        position: relative;
+        width: 250px;
+        border-radius: 10px;
+        overflow: hidden;
+        transition: transform 0.3s ease-in-out;
+      }
+
+      .thumbnail:hover {
+        transform: scale(1.2);
+      }
+
+      .thumbnail-image {
+        width: 100%;
+        transition: transform 0.3s ease-in-out;
+        border-radius: 10px;
+      }
+
+      .thumbnail-info {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="thumbnail">
+      <!-- Thumbnail Image -->
+      <img src="ASSETS/download.jpg" alt="Thumbnail" class="thumbnail-image" />
+
+      <div class="video-duration">Loading...</div>
+
+      <!-- Overlay Content -->
+      <div class="thumbnail-info">
+        <h3 class="thumbnail-title">Loading...</h3>
+        <div class="thumbnail-meta">
+          <span class="thumbnail-duration">DURATION⏳: Loading...</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // API URL for exercises (example: chest exercises)
+      const API_URL =
+        "https://exercisedb.p.rapidapi.com/exercises/bodyPart/chest";
+
+      // API Headers (Replace with your API key)
+      const options = {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": "YOUR_API_KEY", // Replace with your actual API key
+          "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
+        },
+      };
+
+      // Function to fetch data from ExerciseDB API
+      async function fetchExerciseData() {
+        try {
+          const response = await fetch(API_URL, options);
+          const data = await response.json();
+
+          // Select the first exercise (for example)
+          const exercise = data[0];
+
+          // Extract needed info
+          const gifUrl = exercise.gifUrl; // GIF for the exercise
+          const title = exercise.name; // Exercise name
+          const duration = "15:00"; // Manually setting this
+
+          // Update the HTML
+          document.querySelector(".thumbnail-image").src = gifUrl;
+          document.querySelector(".thumbnail-title").textContent = title;
+          document.querySelector(".video-duration").textContent = duration;
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      }
+
+      // Call the function when the page loads
+      fetchExerciseData();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+﻿body {
+  font-family: Arial, sans-serif;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  height: 103vh;
+}
+.container {
+  background-color: #9bb4dc;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  width: 50%;
+  position: relative;
+}
+.exercise-card {
+  background: #9bb4dc;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 100%;
+}
+.exercise-card img {
+  width: 100px;
+  height: 180px;
+  border-radius: 10px;
+  background: #ccc;
+}
+.tag {
+  display: inline-block;
+  background: orange;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.suggestions {
+  background: #6d89c5;
+  padding: 15px;
+  border-radius: 10px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  right: -350px;
+}
+.suggestion {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: right;
+  margin-bottom: 10px;
+}
+.suggestion img {
+  width: 300px;
+  height: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.difficulty {
+  background: orange;
+  color: white;
+  padding: 3px 7px;
+  border-radius: 5px;
+  font-size: 12px;
+  margin-top: 5px;
+}
+.difficulty.intermediate {
+  background: red;
+}

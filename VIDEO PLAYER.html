@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise Display</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="Advance search.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="CATEGORY.css" />
+    <link rel="stylesheet" href="Thumbnail.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="stylesheet" href="advancebutton.css" />
+    <link rel="stylesheet" href="VIDEO PLAYER.css" />
+  </head>
+  <body>
+    <header>
+      <img
+        src="ASSETS/logo.png"
+        alt="Logo"
+        class="logo"
+        style="height: 50px; position: absolute; left: 50px" />
+      <nav>
+        <ul class="nav-links">
+          <li
+            class="nav-home"
+            style="margin: 0 20px; display: flex; align-items: left">
+            <a
+              href="header.js.txt"
+              style="
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+              ">
+              <img
+                src="ASSETS/Home.png"
+                alt="Home Icon"
+                style="margin-right: 5px" />
+              HOME
+            </a>
+          </li>
+          <li
+            class="nav-bmi"
+            style="margin: 0 20px; display: flex; align-items: center">
+            <a
+              href="bmi_calculator.html"
+              style="
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+              ">
+              <img
+                src="ASSETS/BMI CALCULATOR.png"
+                alt="BMI Calculator Icon"
+                style="margin-right: 5px" />
+              BMI CALCULATOR
+            </a>
+          </li>
+          <li
+            class="nav-pinned"
+            style="margin: 0 20px; display: flex; align-items: center">
+            <a
+              href="pinned_workouts.html"
+              style="
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white;
+              ">
+              <img
+                src="ASSETS/Pinned workouts.png"
+                alt="Pinned Workouts Icon"
+                style="margin-right: 5px" />
+              PINNED WORKOUTS
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="exercise-card" id="main-exercise">
+        <img
+          id="main-image"
+          src="ASSETS/push up.png"
+          alt="Exercise Image"
+          style="width: 100%; height: 500px; border-radius: 10px" />
+        <h2 id="main-title">PUSH UP</h2>
+        <div>
+          <span id="main-difficulty" class="tag">MEDIUM</span>
+        </div>
+      </div>
+
+      <div class="suggestions">
+        <h3>SUGGESTIONS</h3>
+
+        <div
+          class="suggestion"
+          onclick="swapExercise('sit ups.webp', 'Sit Ups', 'MEDIUM', 'orange')">
+          <img
+            src="ASSETS/sit ups.webp"
+            alt="Sit Ups"
+            style="width: 150px; height: 100px; border-radius: 5px" />
+          <span style="font-weight: bold"> Sit Ups</span>
+          <span class="difficulty">MEDIUM</span>
+        </div>
+
+        <div
+          class="suggestion"
+          onclick="swapExercise('ASSETS/diamond push up.png', 'Diamond Push Up', 'INTERMEDIATE', 'red')">
+          <img
+            src="ASSETS/diamond push up.png"
+            alt="Diamond Push Up"
+            style="width: 150px; height: 100px; border-radius: 5px" />
+          <span style="font-weight: bold"> Diamond Push Up</span>
+          <span class="difficulty intermediate">INTERMEDIATE</span>
+        </div>
+
+        <div
+          class="suggestion"
+          onclick="swapExercise('plank.jpeg', 'Plank', 'MEDIUM', 'orange')">
+          <img
+            src="ASSETS/plank.jpeg"
+            alt="Plank"
+            style="width: 150px; height: 100px; border-radius: 5px" />
+          <span style="font-weight: bold"> Plank</span>
+          <span class="difficulty">MEDIUM</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <img src="ASSETS/logo.png" alt="Footer Logo" class="Footer-logo" />
+    </footer>
+
+    <script>
+      function swapExercise(image, title, difficulty, color) {
+        document.getElementById("main-image").src = image;
+        document.getElementById("main-title").innerText = title;
+        document.getElementById("main-difficulty").innerText = difficulty;
+        document.getElementById("main-difficulty").style.background = color;
+      }
+    </script>
+  </body>
+</html>

@@ -6,6 +6,12 @@
   background-size: cover;
   margin-top: 50px;
   padding-top: 15px;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+.thumbnail:hover {
+  transform: scale(1.2);
 }
 .thumbnail img {
   width: 250px;
@@ -14,6 +20,7 @@
   padding-left: 25px;
   padding-right: 25px;
   border-radius: 20px;
+  transition: transform 0.3s ease-in-out;
 }
 .thumbnail-play-container {
   position: absolute;
@@ -78,6 +85,9 @@
   padding: 10px;
   color: black;
   font-family: Arial, sans-serif;
+}
+.thumbnail:hover .thumbnail-info {
+  opacity: 1;
 }
 
 .thumbnail-tags {
