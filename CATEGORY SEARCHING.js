@@ -14,7 +14,7 @@ document.querySelectorAll(".category-btn").forEach((button) => {
         method: "GET",
         headers: {
           "X-RapidAPI-Key":
-            "87f5e59955mshdae3a211e701e93p1d5c76jsn6813f7326822",
+            "YOUR_API_KEY_HERE",
           "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
         },
       });
