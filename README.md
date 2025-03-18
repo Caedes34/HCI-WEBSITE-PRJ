@@ -35,8 +35,39 @@
 
 ---
 
-## **⚠ Important Note**  
-🔑 **An API Key is required** to run this program.  
+
+## **🔧 Installation & Dependencies**  
+This project uses **HTML, CSS, and JavaScript** (no additional package installations needed).  
+
+However, an **API key is required** to fetch workout data.  
+
+---
+
+## **🔑 API Key Requirement**  
+This project **requires an API key** from **ExerciseDB API** to function properly.  
+
+### **📌 How to Get an API Key?**  
+1. **Go to RapidAPI** → [ExerciseDB API](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)  
+2. **Sign up / Log in** to RapidAPI.  
+3. **Subscribe to the API** (free or paid plan).  
+4. **Copy your API key** from the **"X-RapidAPI-Key"** section.  
+
+### **🔧 How to Use Your API Key?**  
+Replace `YOUR_API_KEY_HERE` in `script.js` with your actual API key:  
+
+```javascript
+const API_URL = "https://exercisedb.p.rapidapi.com/exercises";
+const options = {
+  method: "GET",
+  headers: {
+    "X-RapidAPI-Key": "SECRET",
+    "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
+  }
+};
+
+---
+
+
 🛠 **Prototype Files:**  
 - `MAIN MENU`, `PROTOTYPES`, and `WEBSITE APPEARANCE FILES` are **test files** used for developing features.  
 - You **can modify them** to integrate with `HOMEPAGE.HTML`.  
@@ -49,4 +80,4 @@
 ✔ **Emphasized key points** (e.g., API Key requirement).  
 ✔ **More structured layout** to make it look professional.  
 
-Would you like me to help write a section for API documentation or contribution guidelines? 🚀
+
