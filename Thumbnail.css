@@ -100,12 +100,14 @@
 
 .thumbnail-title {
   font-family: Rubik, sans-serif;
-  font-size: 20px;
+  font-size: 15px;
   margin: 5px 0;
   font-weight: bold;
-  white-space: nowrap;
-  padding-top: 30px;
-  padding-right: 80px;
+  white-space: normal;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  text-align: left;
+  max-width: 100%;
 }
 
 .thumbnail-duration {
@@ -116,6 +118,7 @@
   width: fit-content;
   padding-right: 10px;
   margin-left: 5px;
+  margin-right: 3px;
   margin-bottom: 6px;
 }
 .thumbnail-difficulty {

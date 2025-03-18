@@ -11,14 +11,14 @@
     <link rel="stylesheet" href="Thumbnail.css" />
     <link rel="stylesheet" href="slider.css" />
     <link rel="stylesheet" href="advancebutton.css" />
+    <link rel="stylesheet" href="Thumbnail.css" />
     <script src="advancebutton.js"></script>
     <script src="duration.js"></script>
     <script src="slider.js"></script>
     <script src="CATEGORY.js" defer></script>
     <script src="Advance search.js" defer></script>
     <script src="HEADER.js" defer></script>
-    <link rel="stylesheet" href="Thumbnail.css" />
-    <!-- <script src="CATEGORY SEARCHING.js" defer></script> -->
+    <script src="CATEGORY SEARCHING.js" defer></script>
     <script src="DIFF.js" defer></script>
     <script src="SEARCHING  FUNC.JS" defer></script>
   </head>
@@ -116,7 +116,7 @@
             width: 300px;
           " />
         <button
-          onclick="window.location.href='thumbnail.html'"
+          onclick="window.location.href='RESULTS PAGE.html'"
           type="submit"
           class="search-button">
           <img
@@ -204,7 +204,7 @@
             <div class="Workout-checkboxes">
               <label> <input type="checkbox" /> Filter 1 </label>
               <br />
-              <label> <input type="checkbox" /> Filter 2 </label>
+              <label> <input type="checkbox" /> Filter 2 </label>`
               <br />
               <label> <input type="checkbox" /> Filter 3 </label>
               <br />
@@ -231,22 +231,37 @@
         </button>
         <div class="category-slider">
           <div class="categories">
-            <button class="category-btn">
-              <img src="ASSETS/CARDIO CATEGORY.png" alt="Cardio" /></button
-            >0
-            <button class="category-btn">
-              <img src="ASSETS/BACK CATEGORY.png" alt="Back" />
+            <button
+              class="category-btn"
+              id="Search button car"
+              data-value="Cardio">
+              <img src="ASSETS/CARDIO CATEGORY.png" />
             </button>
-            <button class="category-btn">
-              <img src="ASSETS/LEGS CATEGORY.png" alt="Legs" />
+            <button
+              class="category-btn"
+              id="Search button back"
+              data-value="back">
+              <img src="ASSETS/BACK CATEGORY.png" />
             </button>
-            <button class="category-btn">
-              <img src="ASSETS/CHEST CATEGORY.png" alt="Chest" />
+            <button class="category-btn" id="Search button " data-value="legs">
+              <img src="ASSETS/LEGS CATEGORY.png" />
             </button>
-            <button class="category-btn">
-              <img src="ASSETS/STRENGTH CATEGORY.png" alt="Strength" />
+            <button
+              class="category-btn"
+              id="Search button che"
+              data-value="Chest">
+              <img src="ASSETS/CHEST CATEGORY.png" />
             </button>
-            <button class="category-btn">
+            <button
+              class="category-btn"
+              id=" search-button str"
+              data-value="Strength">
+              <img src="ASSETS/STRENGTH CATEGORY.png" />
+            </button>
+            <button
+              class="category-btn"
+              id="search-button tri"
+              data-value="Triceps">
               <img src="ASSETS/TRICEPS CATEGORY.png" alt="Triceps" />
             </button>
           </div>

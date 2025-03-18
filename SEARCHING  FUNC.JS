@@ -12,7 +12,7 @@ document
 
     if (!workoutname) return;
 
-    window.location.href = `Thumbnail.html?search=${encodeURIComponent(
+    window.location.href = `RESULTS PAGE.html?search=${encodeURIComponent(
       workoutname
     )}`;
   });
@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   API_URL = `https://exercisedb.p.rapidapi.com/exercises/name/${encodeURIComponent(
     workoutname
   )}`;
+
   try {
     const response = await fetch(API_URL, {
       method: "GET",
@@ -74,7 +75,6 @@ function fetchExerciseGifs(data) {
 
       // Set title and GIF from ExerciseDB API
       img.src = data[index].gifUrl;
-
       titleElement.textContent = data[index].name;
 
       // Fetch difficulty and instructions from API-Ninjas API
@@ -83,7 +83,3 @@ function fetchExerciseGifs(data) {
     console.error("Error fetching exercise GIFs:", error);
   }
 }
-
-//pop up window search result
-
-// Run the function after the page loads
