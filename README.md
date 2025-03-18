@@ -1,7 +1,7 @@
 
 
-# **HCI Website Project** (Group 1 - BSIT1-12)  
-### **Created by: CORPUZ**  
+# **HCI Website Project** (CORPUZ)  
+### **Created by:   Group 1 - BSIT1-12
 *A website that provides workout guides.*
 
 ---
