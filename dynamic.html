@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" src="homepage.css" />
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="Advance search.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="CATEGORY.css" />
+    <link rel="stylesheet" href="Thumbnail.css" />
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="stylesheet" href="advancebutton.css" />
+    <link rel="stylesheet" href="Thumbnail.css" />
+    <link rel="stylesheet" href="dynamic.css" />
+    <script src="advancebutton.js"></script>
+    <script src="duration.js"></script>
+    <script src="slider.js"></script>
+    <script src="CATEGORY.js" defer></script>
+    <script src="Advance search.js" defer></script>
+    <script src="HEADER.js" defer></script>
+    <script src="CATEGORY SEARCHING.js" defer></script>
+    
+    <script src="DIFF.js" defer></script>
+    <script src="SEARCHING  FUNC.JS" defer></script>
+    <script src="DYNAMIC.JS" defer></script>
+  </head>
+  <body>
+  
+        <header>
+          <!-- Logo (Positioned to the Left) -->
+          <img src="ASSETS/logo.png" alt="Logo" class="logo" />
+
+          <!-- Navigation Links (Centered) -->
+          <nav>
+            <ul class="nav-links">
+              <li
+                class="nav-home"
+                style="margin: 0 20px; display: flex; align-items: center">
+                <a
+                  href="HOMEPAGE.html"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: white;
+                  ">
+                  <img
+                    src="ASSETS/Home.png"
+                    alt="Home Icon"
+                    style="margin-right: 5px" />
+                  HOME
+                </a>
+              </li>
+              <li
+                class="nav-bmi"
+                style="margin: 0 20px; display: flex; align-items: center">
+                <a
+                  href="BMI CALCULATOR.html"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: white;
+                  ">
+                  <img
+                    src="ASSETS/BMI CALCULATOR.png"
+                    alt="BMI Calculator Icon"
+                    style="margin-right: 5px" />
+                  BMI CALCULATOR
+                </a>
+              </li>
+              <li
+                class="nav-pinned"
+                style="margin: 0 20px; display: flex; align-items: center">
+                <a
+                  href="PinnedWorkouts.html"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    text-decoration: none;
+                    color: white;
+                  ">
+                  <img
+                    src="ASSETS/pinn.png"
+                    alt="Pinned Workouts Icon"
+                    style="margin-right: 5px" />
+                  PINNED WORKOUTS
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+
+        <!--just a background image-->
+        <main
+          style="
+            background-image: url('ASSETS/BACKGROUND IMAGE.png');
+            background-size: cover;
+            background-position: center;
+            height: 100vh; /* Ensure the main section takes the full height */
+          "></main>
+
+        <div
+          style="
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          ">
+          <form class="searchForm" id="searchForm">
+            <input
+              type="text"
+              placeholder="Search for workouts..."
+              id="SearchInput"
+              style="
+                padding: 10px 10px;
+                border-radius: 5px;
+                border: 1px solid #ccc;
+                width: 300px;
+              " />
+            <button
+              onclick="window.location.href='RESULTS PAGE.html'"
+              type="submit"
+              class="search-button">
+              <img
+                src="ASSETS/SEACH BUTTON (1).png"
+                style="width: 100px; height: 45px" />
+            </button>
+          </form>
+
+          <div>
+            <button class="advanced-button" onclick="openModal()">
+              <img src="ASSETS/Advance Filters.png" />
+            </button>
+
+            <div
+              class="advanced-button"
+              id="overlay"
+              onclick="closeModal()"></div>
+
+            <!-- Pop-up Modal -->
+            <div class="modal" id="modal">
+              <button class="close-btn" onclick="closeModal()">X</button>
+              <h2>Advanced Filters</h2>
+              <div class="first-filterset">
+                <p>Workout Type:</p>
+                <div class="Workout-checkboxes">
+                  <label> <input type="checkbox" /> Strength </label>
+                  <br />
+                  <label> <input type="checkbox" /> Cardio </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 3 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 4 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 5 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 6 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 7 </label>
+                  <br />
+                </div>
+              </div>
+
+              <label for="duration">Duration: 1 min </label>
+              <input
+                type="range"
+                id="duration"
+                name="duration"
+                min="5"
+                max="60"
+                step="2"
+                value="30" />
+              <span id="durationValue">30 min</span>
+
+              <div class="second-filterset">
+                <p>Difficulty:</p>
+                <div class="Workout-checkboxes">
+                  <label> <input type="checkbox" /> EASY </label>
+                  <br />
+                  <label> <input type="checkbox" /> Medium </label>
+                  <br />
+                  <label> <input type="checkbox" /> Intermediate </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="first-filterset">
+                <p>Muscle Group:</p>
+                <div class="Workout-checkboxes">
+                  <label> <input type="checkbox" /> Filter 1 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 2 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 3 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 4 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 5 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 6 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 7 </label>
+                  <br />
+                </div>
+              </div>
+
+              <div class="first-filterset">
+                <p>Goal:</p>
+                <div class="Workout-checkboxes">
+                  <label> <input type="checkbox" /> Filter 1 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 2 </label>`
+                  <br />
+                  <label> <input type="checkbox" /> Filter 3 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 4 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 5 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 6 </label>
+                  <br />
+                  <label> <input type="checkbox" /> Filter 7 </label>
+                  <br />
+                </div>
+              </div>
+              <button class="open-btn" onclick="closeModal()">
+                Apply Filters
+              </button>
+              <button class="open-btn" onclick="resetFilters()">RESET</button>
+            </div>
+          </div>
+        </div>
+
+        <section>
+          <div class="category-container">
+            <button id="prevBtn" class="nav-btn">
+              <img src="ASSETS/PREV BUTTON.png" />
+            </button>
+            <div class="category-slider">
+              <div class="categories">
+                <button
+                  class="category-btn"
+                  id="Search button car"
+                  data-value="Cardio">
+                  <img src="ASSETS/CARDIO CATEGORY.png" />
+                </button>
+                <button
+                  class="category-btn"
+                  id="Search button back"
+                  data-value="back">
+                  <img src="ASSETS/BACK CATEGORY.png" />
+                </button>
+                <button
+                  class="category-btn"
+                  id="Search button "
+                  data-value="legs">
+                  <img src="ASSETS/LEGS CATEGORY.png" />
+                </button>
+                <button
+                  class="category-btn"
+                  id="Search button che"
+                  data-value="Chest">
+                  <img src="ASSETS/CHEST CATEGORY.png" />
+                </button>
+                <button
+                  class="category-btn"
+                  id=" search-button str"
+                  data-value="Strength">
+                  <img src="ASSETS/STRENGTH CATEGORY.png" />
+                </button>
+                <button
+                  class="category-btn"
+                  id="search-button tri"
+                  data-value="Triceps">
+                  <img src="ASSETS/TRICEPS CATEGORY.png" alt="Triceps" />
+                </button>
+              </div>
+            </div>
+            <button id="nextBtn" class="nav-btn">
+              <img src="ASSETS/NEXT BUTTON.png" />
+            </button>
+          </div>
+        </section>
+        <!-- Corrected closing tag for the section -->
+
+        <!--VIDEO CONTENTS-->
+        <div id="thumbnail-container" class="Thumbnail-SET-1"></div>
+
+        <!--VIDEO CONTENTS ENDS HERE-->
+
+        <div class="slider-container">
+          <button id="prev" class="arrow1">&lt;</button>
+
+          <!-- Left Arrow -->
+
+          <div class="slider">
+            <div class="slide active">1</div>
+            <div class="slide">2</div>
+            <div class="slide">3</div>
+            <div class="slide">4</div>
+            <div class="slide">5</div>
+            <div class="slide">6</div>
+            <div class="slide">7</div>
+            <div class="slide">8</div>
+            <div class="slide">...</div>
+          </div>
+
+          <button id="next" class="arrow2">&gt;</button>
+          <!-- Right Arrow -->
+        </div>
+
+        <footer>
+          <img src="ASSETS/logo.png" alt="Footer Logo" class="Footer-logo" />
+        </footer>
+      </body>
+    
+  </body>
+</html>

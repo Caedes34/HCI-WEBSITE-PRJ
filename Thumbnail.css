@@ -10,6 +10,19 @@
   overflow: hidden;
   transition: transform 0.3s ease-in-out;
 }
+#thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+  max-width: 900px;
+  margin: 0 auto;
+  margin-top: 50px;
+  padding-top: 15px;
+  border-radius: 10px;
+}
+
 .thumbnail:hover {
   transform: scale(1.2);
 }
