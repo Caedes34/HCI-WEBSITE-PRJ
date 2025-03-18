@@ -1,4 +1,6 @@
 # HCI-WEBSITE-PRJ
+#CORPUZ
+-an exercise website.
 BSIT1-12 PROJECT 
 
 
