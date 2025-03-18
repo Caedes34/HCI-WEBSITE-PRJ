@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch(API_URL, {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "87f5e59955mshdae3a211e701e93p1d5c76jsn6813f7326822",
+        "X-RapidAPI-Key": "YOUR_API_KEY_HERE",
         "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
       },
     });
