@@ -36,6 +36,21 @@
 ---
 
 
+
+🛠 **Prototype Files:**  
+- `MAIN MENU`, `PROTOTYPES`, and `WEBSITE APPEARANCE FILES` are **test files** used for developing features.  
+- You **can modify them** to integrate with `HOMEPAGE.HTML`.  
+
+---
+
+### ✅ **Improvements Made:**  
+✔ Clear **headings and formatting** for easy readability.  
+✔ Used **bullet points** instead of long paragraphs.  
+✔ **Emphasized key points** (e.g., API Key requirement).  
+✔ **More structured layout** to make it look professional.  
+
+
+
 ## **🔧 Installation & Dependencies**  
 This project uses **HTML, CSS, and JavaScript** (no additional package installations needed).  
 
@@ -50,7 +65,10 @@ This project **requires an API key** from **ExerciseDB API** to function properl
 1. **Go to RapidAPI** → [ExerciseDB API](https://rapidapi.com/justin-WFnsXH_t6/api/exercisedb)  
 2. **Sign up / Log in** to RapidAPI.  
 3. **Subscribe to the API** (free or paid plan).  
-4. **Copy your API key** from the **"X-RapidAPI-Key"** section.  
+4. **Copy your API key** from the **"X-RapidAPI-Key"** section.
+
+
+
 
 ### **🔧 How to Use Your API Key?**  
 Replace `YOUR_API_KEY_HERE` in `script.js` with your actual API key:  
@@ -65,19 +83,5 @@ const options = {
   }
 };
 
----
-
-
-🛠 **Prototype Files:**  
-- `MAIN MENU`, `PROTOTYPES`, and `WEBSITE APPEARANCE FILES` are **test files** used for developing features.  
-- You **can modify them** to integrate with `HOMEPAGE.HTML`.  
-
----
-
-### ✅ **Improvements Made:**  
-✔ Clear **headings and formatting** for easy readability.  
-✔ Used **bullet points** instead of long paragraphs.  
-✔ **Emphasized key points** (e.g., API Key requirement).  
-✔ **More structured layout** to make it look professional.  
 
 
