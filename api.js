@@ -4,7 +4,7 @@ const apiKey = "YOUR_API_KEY"; // Replace this with your RapidAPI key
 fetch("https://exercisedb.p.rapidapi.com/exercises/bodyPart/chest", {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "87f5e59955mshdae3a211e701e93p1d5c76jsn6813f7326822",
+    "X-RapidAPI-Key": "",
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 })
