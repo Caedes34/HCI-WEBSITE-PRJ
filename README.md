@@ -78,7 +78,7 @@ const API_URL = "https://exercisedb.p.rapidapi.com/exercises";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "SECRET",
+    "X-RapidAPI-Key": "YOUR_API_KEY_HERE",
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com"
   }
 };
