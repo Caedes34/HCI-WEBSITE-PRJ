@@ -74,3 +74,34 @@ footer {
 .search-button:active {
   transform: scale(0.95);
 }
+.searchForm {
+  display: flex;
+  align-items: center;
+}
+
+.searchForm input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin-right: 10px; /* Adds space between input and button */
+}
+
+.searchForm input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 300px;
+  margin-right: 10px; /* Adds space between input and button */
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search-button img {
+  width: 50px; /* Adjust size to match input height */
+  height: 45px;
+}

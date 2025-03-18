@@ -1,5 +1,5 @@
 // API URL for exercises (example: waist exercises)
-const API_URL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/cardio";
+const API_URL = "https://exercisedb.p.rapidapi.com/exercises/target/quads";
 
 // API Headers
 const options = {

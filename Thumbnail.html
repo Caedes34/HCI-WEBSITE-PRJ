@@ -4,11 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Video Placeholder</title>
+    <link rel="stylesheet" href="homepage.css" />
+    <link rel="stylesheet" href="Advance search.css" />
+    <link rel="stylesheet" href="header.css" />
+    <link rel="stylesheet" href="CATEGORY.css" />
     <link rel="stylesheet" href="Thumbnail.css" />
-    <script src="CATEGORY SEARCHING.js" defer></script>
+    <link rel="stylesheet" href="slider.css" />
+    <link rel="stylesheet" href="advancebutton.css" />
+    <script src="advancebutton.js"></script>
+    <script src="duration.js"></script>
+    <script src="slider.js"></script>
+    <script src="CATEGORY.js" defer></script>
+    <script src="Advance search.js" defer></script>
+    <script src="HEADER.js" defer></script>
+    <link rel="stylesheet" href="Thumbnail.css" />
+    <!-- <script src="CATEGORY SEARCHING.js" defer></script> -->
     <script src="DIFF.js" defer></script>
+    <script src="SEARCHING  FUNC.JS" defer></script>
   </head>
-  <body>
+  <div style="
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+">
+    <form class="searchForm" id="searchForm">
+      <input
+        type="text"
+        placeholder="Search for workouts..."
+        id="SearchInput"
+        style="
+          padding: 10px 10px;
+          border-radius: 5px;
+          border: 1px solid #ccc;
+          width: 300px;
+        " />
+      <button
+        onclick="window.location.href='thumbnail.html'"
+        type="submit"
+        class="search-button">
+        <img
+          src="ASSETS/SEACH BUTTON (1).png"
+          style="width: 100px; height: 45px" />
+      </button>
+
+
+      
+    </form>
+  </div>
+
     <div class="Thumbnail-SET-1">
       <div class="thumbnail">
         <!-- Thumbnail Image -->
@@ -38,6 +82,8 @@
           </div>
         </div>
       </div>
+
+      
 
       <div class="thumbnail">
         <!-- Thumbnail Image -->

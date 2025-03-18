@@ -18,8 +18,9 @@
     <script src="Advance search.js" defer></script>
     <script src="HEADER.js" defer></script>
     <link rel="stylesheet" href="Thumbnail.css" />
-    <script src="CATEGORY SEARCHING.js" defer></script>
+    <!-- <script src="CATEGORY SEARCHING.js" defer></script> -->
     <script src="DIFF.js" defer></script>
+    <script src="SEARCHING  FUNC.JS" defer></script>
   </head>
   <body>
     <header>
@@ -77,7 +78,7 @@
                 color: white;
               ">
               <img
-                src="ASSETS/Pinned workouts.png"
+                src="ASSETS/pinn.png"
                 alt="Pinned Workouts Icon"
                 style="margin-right: 5px" />
               PINNED WORKOUTS
@@ -103,21 +104,27 @@
         align-items: center;
         justify-content: center;
       ">
-      <input
-        type="text"
-        placeholder="Search for workouts..."
-        style="
-          padding: 10px;
-          border-radius: 5px;
-          border: 1px solid #ccc;
-          width: 300px;
-        " />
-      <!--customize the size of the img button advance search picture-->
-      <button class="search-button">
-        <img
-          src="ASSETS/SEACH BUTTON (1).png"
-          style="width: 100px; height: 45px" />
-      </button>
+      <form class="searchForm" id="searchForm">
+        <input
+          type="text"
+          placeholder="Search for workouts..."
+          id="SearchInput"
+          style="
+            padding: 10px 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            width: 300px;
+          " />
+        <button
+          onclick="window.location.href='thumbnail.html'"
+          type="submit"
+          class="search-button">
+          <img
+            src="ASSETS/SEACH BUTTON (1).png"
+            style="width: 100px; height: 45px" />
+        </button>
+      </form>
+
       <div>
         <button class="advanced-button" onclick="openModal()">
           <img src="ASSETS/Advance Filters.png" />
