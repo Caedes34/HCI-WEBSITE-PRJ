@@ -8,7 +8,7 @@ _A website that provides workout guides._
 
 ## **📥 Download & Installation Guide**
 
-1. Download the project files.
+1. Download the project files(Press <Code> and download zip).
 2. Unzip the downloaded file.
 3. Open `HOMEPAGE.HTML` in a web browser to start using the website.
 
