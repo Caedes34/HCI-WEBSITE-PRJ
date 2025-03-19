@@ -74,7 +74,7 @@ This project **requires an API key** from **ExerciseDB API** to function properl
 
 ### **🔧 How to Use Your API Key?**
 
-Replace `YOUR_API_KEY_HERE` in `script.js` with your actual API key:
+Replace `YOUR_API_KEY_HERE` in `CATEGORY SEARCHING/SEARCHING FUNC.js` with your actual API key:
 
 ```javascript
 const API_URL = "https://exercisedb.p.rapidapi.com/exercises";
