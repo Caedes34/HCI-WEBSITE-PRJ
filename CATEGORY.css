@@ -3,14 +3,14 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  margin-top: 50px;
+  margin-top: 10px;
   width: 100%;
   overflow: hidden;
   position: relative;
 }
 
 .category-slider {
-  width: 1235px;
+  width: 950px;
   overflow: hidden;
   position: relative;
 }

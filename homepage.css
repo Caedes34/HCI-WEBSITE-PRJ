@@ -84,7 +84,7 @@ footer {
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 300px;
-  margin-right: 10px; /* Adds space between input and button */
+  margin-right: 10px;
 }
 
 .searchForm input {
@@ -92,7 +92,7 @@ footer {
   border-radius: 5px;
   border: 1px solid #ccc;
   width: 300px;
-  margin-right: 10px; /* Adds space between input and button */
+  margin-right: 10px;
 }
 
 .search-button {
@@ -102,6 +102,6 @@ footer {
 }
 
 .search-button img {
-  width: 50px; /* Adjust size to match input height */
+  width: 50px;
   height: 45px;
 }

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch(API_URL, {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "YOUR_API_KEY_HERE",
+        "X-RapidAPI-Key": "87f5e59955mshdae3a211e701e93p1d5c76jsn6813f7326822",
         "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
       },
     });
@@ -46,12 +46,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error fetching", error);
   }
 });
-// get the string value from the user
 
-//the api fetching logic and showing the result
 function fetchExerciseGifs(data) {
   try {
-    // Get all thumbnail containers
     const thumbnails = document.querySelectorAll(".thumbnail");
 
     if (data.length === 0) {
@@ -65,11 +62,8 @@ function fetchExerciseGifs(data) {
       const img = thumbnail.querySelector(".thumbnail-image");
       const titleElement = thumbnail.querySelector(".thumbnail-title");
 
-      // Set title and GIF from ExerciseDB API
       img.src = data[index].gifUrl;
       titleElement.textContent = data[index].name;
-
-      // Fetch difficulty and instructions from API-Ninjas API
     });
   } catch (error) {
     console.error("Error fetching exercise GIFs:", error);

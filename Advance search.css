@@ -1,6 +1,3 @@
-/* customize the filters position*/
-/* 
- */
 .search-container {
   display: flex;
   align-items: center;
@@ -28,9 +25,6 @@
 .advanced-button:hover {
   background-color: transparent;
 }
-
-/* Initially hide filters */
-/* filters should be at the bottom of the search bar*/
 
 .filters {
   display: none;

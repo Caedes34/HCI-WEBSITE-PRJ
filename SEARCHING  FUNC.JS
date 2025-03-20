@@ -1,7 +1,7 @@
 // searching function
 let API_URL = "";
 let response = "";
-let data = "";
+let data = [];
 
 document
   .getElementById("searchForm")
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const response = await fetch(API_URL, {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "YOUR_API_KEY_HERE",
+        "X-RapidAPI-Key": "87f5e59955mshdae3a211e701e93p1d5c76jsn6813f7326822",
         "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
       },
     });
@@ -49,37 +49,92 @@ document.addEventListener("DOMContentLoaded", async () => {
       return;
     }
 
-    fetchExerciseGifs(data);
+    data.forEach((workout) => createThumbnail(workout));
   } catch (error) {
     console.error("Error fetching", error);
   }
 });
-// get the string value from the user
 
-//the api fetching logic and showing the result
-function fetchExerciseGifs(data) {
-  try {
-    // Get all thumbnail containers
-    const thumbnails = document.querySelectorAll(".thumbnail");
+function createThumbnail(workout) {
+  const thumbnail = document.createElement("div");
+  thumbnail.classList.add("thumbnail");
 
-    if (data.length === 0) {
-      console.error("No exercises found in the API response.");
-      return;
-    }
+  // Create image element
+  const img = document.createElement("img");
+  img.src = workout.gifUrl || "ASSETS/LOADING ANIM.gif"; // Fallback image
+  img.alt = "Thumbnail";
+  img.classList.add("thumbnail-image");
+  5;
 
-    thumbnails.forEach(async (thumbnail, index) => {
-      if (!data[index]) return;
+  // Create PIN icon
+  const pinDiv = document.createElement("div");
+  pinDiv.classList.add("PIN-ICON");
+  const pinBtn = document.createElement("button");
+  const pinImg = document.createElement("img");
+  pinImg.src = "ASSETS/PIN.png";
+  pinImg.alt = "PIN ICON";
+  pinBtn.appendChild(pinImg);
+  pinDiv.appendChild(pinBtn);
 
-      const img = thumbnail.querySelector(".thumbnail-image");
-      const titleElement = thumbnail.querySelector(".thumbnail-title");
+  // Create info section
+  const infoDiv = document.createElement("div");
+  infoDiv.classList.add("thumbnail-info");
 
-      // Set title and GIF from ExerciseDB API
-      img.src = data[index].gifUrl;
-      titleElement.textContent = data[index].name;
+  // Create tags
+  const tagsDiv = document.createElement("div");
+  tagsDiv.classList.add("thumbnail-tags");
 
-      // Fetch difficulty and instructions from API-Ninjas API
-    });
-  } catch (error) {
-    console.error("Error fetching exercise GIFs:", error);
-  }
+  const tags = Array.isArray(workout.tags) ? workout.tags : [];
+  tags.forEach((tagText) => {
+    const tag = document.createElement("span");
+    tag.textContent = tagText;
+    tag.classList.add("tag");
+    tagsDiv.appendChild(tag);
+  });
+
+  // Title
+  const title = document.createElement("h3");
+  title.classList.add("thumbnail-title");
+  title.textContent = workout.name || "Workout Name";
+
+  // Metadata (Duration & Difficulty)
+  const metaDiv = document.createElement("div");
+  metaDiv.classList.add("thumbnail-meta");
+
+  const durationSpan = document.createElement("span");
+  durationSpan.classList.add("thumbnail-duration");
+  durationSpan.textContent = `DURATION: ${workout.duration || "15 min"}`;
+
+  const difficultyLevels = ["Beginner", "Intermediate", "Expert"];
+
+  const difficultySpan = document.createElement("span");
+  difficultySpan.classList.add("thumbnail-difficulty");
+  difficultySpan.textContent =
+    workout.difficulty ||
+    difficultyLevels[Math.floor(Math.random() * difficultyLevels.length)];
+
+  // Append everything
+  metaDiv.appendChild(durationSpan);
+  metaDiv.appendChild(difficultySpan);
+
+  infoDiv.appendChild(tagsDiv);
+  infoDiv.appendChild(title);
+  infoDiv.appendChild(metaDiv);
+
+  thumbnail.appendChild(img);
+  thumbnail.appendChild(pinDiv);
+  thumbnail.appendChild(infoDiv);
+
+  return thumbnail;
+}
+
+async function loadThumbnails() {
+  let workout = await fetchWorkoutData();
+  const container = document.getElementById("thumbnail-container");
+  container.innerHTML = "";
+
+  workout.forEach((workout) => {
+    const thumbnail = createThumbnail(workout);
+    container.appendChild(thumbnail);
+  });
 }

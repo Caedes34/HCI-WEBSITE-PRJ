@@ -5,5 +5,5 @@ function toggleFilters() {
 }
 
 function selectTag(tag) {
-  tag.classList.toggle("selected"); // Toggle selection on click
+  tag.classList.toggle("selected");
 }

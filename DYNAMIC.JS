@@ -25,14 +25,12 @@ function createThumbnail(workout) {
   const thumbnail = document.createElement("div");
   thumbnail.classList.add("thumbnail");
 
-  // Create image element
   const img = document.createElement("img");
-  img.src = workout.gifUrl || "ASSETS/LOADING ANIM.gif"; // Fallback image
+  img.src = workout.gifUrl || "ASSETS/LOADING ANIM.gif";
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
   5;
 
-  // Create PIN icon
   const pinDiv = document.createElement("div");
   pinDiv.classList.add("PIN-ICON");
   const pinBtn = document.createElement("button");
@@ -42,11 +40,9 @@ function createThumbnail(workout) {
   pinBtn.appendChild(pinImg);
   pinDiv.appendChild(pinBtn);
 
-  // Create info section
   const infoDiv = document.createElement("div");
   infoDiv.classList.add("thumbnail-info");
 
-  // Create tags
   const tagsDiv = document.createElement("div");
   tagsDiv.classList.add("thumbnail-tags");
 
@@ -58,12 +54,10 @@ function createThumbnail(workout) {
     tagsDiv.appendChild(tag);
   });
 
-  // Title
   const title = document.createElement("h3");
   title.classList.add("thumbnail-title");
   title.textContent = workout.name || "Workout Name";
 
-  // Metadata (Duration & Difficulty)
   const metaDiv = document.createElement("div");
   metaDiv.classList.add("thumbnail-meta");
 
@@ -79,7 +73,6 @@ function createThumbnail(workout) {
     workout.difficulty ||
     difficultyLevels[Math.floor(Math.random() * difficultyLevels.length)];
 
-  // Append everything
   metaDiv.appendChild(durationSpan);
   metaDiv.appendChild(difficultySpan);
 

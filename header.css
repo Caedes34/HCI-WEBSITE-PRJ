@@ -3,16 +3,11 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.8); /* Adjust for visibility */
+  background-color: rgba(0, 0, 0, 0.8); 
   padding: 15px 0;
   transition: transform 0.3s ease-in-out;
-  z-index: 1000; /* Ensures it stays above other elements */
+  z-index: 1000; 
 }
-
-.hidden-header {
-  transform: translateY(-100%); /* Moves the header out of view */
-}
-
 
 nav {
   display: flex;

@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative; /* Makes this the reference for absolute positioning */
+  position: relative;
   margin-top: 6%;
   left: 10%;
 }
@@ -14,11 +14,10 @@
   width: 417px;
   height: 85px;
   position: absolute;
-  top: 50%; /* Moves the logo down by 50% of the parent */
-  left: 50%; /* Moves the logo right by 50% of the parent */
-  transform: translate(-50%, -50%); /* Centers it inside the parent */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
 .pinned_workouts_logo img {
   width: 100%;
   height: 100%;
