@@ -3,29 +3,26 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="css.Advance search.css" />
+    <title>HOMEPAGE</title>
+    <link rel="stylesheet" href="css/advance-button.css" />
+    <link rel="stylesheet" href="css/advance-search.css" />
+    <link rel="stylesheet" href="css/category.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/CATEGORY.css" />
-    <link rel="stylesheet" href="css/Thumbnail.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
     <link rel="stylesheet" href="css/slider.css" />
-    <link rel="stylesheet" href="css/advancebutton.css" />
-    <link rel="stylesheet" href="css/Thumbnail.css" />
-    <script src="js/advancebutton.js"></script>
-    <script src="js/duration.js"></script>
-    <script src="js/slider.js"></script>
-    <script src="js/CATEGORY.js" defer></script>
-    <script src="js/Advance search.js" defer></script>
-    <script src="js/HEADER.js" defer></script>
-    <script src="js/CATEGORY SEARCHING.js" defer></script>
-    <script src="js/DIFF.js" defer></script>
-    <script src="js/SEARCHING  FUNC.JS" defer></script>
+    <link rel="stylesheet" href="thumbnails.css" />
+    <script src="js/advance-search.js" defer></script>
+    <script src="js/advancebutton.js" defer></script>
+    <script src="js/calculator.js" defer></script>
+    <script src="js/category.js" defer></script>
+    <script src="js/category-search.js" defer></script>
+    <script src="js/diff.js" defer></script>
+    <script src="js/searching-func.JS" defer></script>
   </head>
   <body>
     <header>
       <!-- Logo (Positioned to the Left) -->
-      <img src="Images/logo.png" alt="Logo" class="logo" />
+      <img src="images/logo.png" alt="Logo" class="logo" />
 
       <!-- Navigation Links (Centered) -->
       <nav>
@@ -42,7 +39,7 @@
                 color: white;
               ">
               <img
-                src="Images/Home.png"
+                src="images/Home.png"
                 alt="Home Icon"
                 style="margin-right: 5px" />
               HOME
@@ -60,7 +57,7 @@
                 color: white;
               ">
               <img
-                src="Images/BMI CALCULATOR.png"
+                src="images/BMI CALCULATOR.png"
                 alt="BMI Calculator Icon"
                 style="margin-right: 5px" />
               BMI CALCULATOR
@@ -78,7 +75,7 @@
                 color: white;
               ">
               <img
-                src="Images/pinn.png"
+                src="images/pinn.png"
                 alt="Pinned Workouts Icon"
                 style="margin-right: 5px" />
               PINNED WORKOUTS
@@ -91,7 +88,7 @@
     <!--just a background image-->
     <main
       style="
-        background-image: url('Images/BACKGROUND IMAGE.png');
+        background-image: url('images/BACKGROUND IMAGE.png');
         background-size: cover;
         background-position: center;
         height: 100vh; /* Ensure the main section takes the full height */
@@ -120,14 +117,14 @@
           type="submit"
           class="search-button">
           <img
-            src="Images/SEACH BUTTON (1).png"
+            src="images/SEACH BUTTON (1).png"
             style="width: 100px; height: 45px" />
         </button>
       </form>
 
       <div>
         <button class="advanced-button" onclick="openModal()">
-          <img src="Images/Advance Filters.png" />
+          <img src="images/Advance Filters.png" />
         </button>
 
         <div class="advanced-button" id="overlay" onclick="closeModal()"></div>
@@ -227,7 +224,7 @@
     <section>
       <div class="category-container">
         <button id="prevBtn" class="nav-btn">
-          <img src="Images/PREV BUTTON.png" />
+          <img src="images/PREV BUTTON.png" />
         </button>
         <div class="category-slider">
           <div class="categories">
@@ -235,39 +232,39 @@
               class="category-btn"
               id="Search button car"
               data-value="Cardio">
-              <img src="Images/CARDIO CATEGORY.png" />
+              <img src="images/CARDIO CATEGORY.png" />
             </button>
             <button
               class="category-btn"
               id="Search button back"
               data-value="back">
-              <img src="Images/BACK CATEGORY.png" />
+              <img src="images/BACK CATEGORY.png" />
             </button>
             <button class="category-btn" id="Search button " data-value="legs">
-              <img src="Images/LEGS CATEGORY.png" />
+              <img src="images/LEGS CATEGORY.png" />
             </button>
             <button
               class="category-btn"
               id="Search button che"
               data-value="Chest">
-              <img src="Images/CHEST CATEGORY.png" />
+              <img src="images/CHEST CATEGORY.png" />
             </button>
             <button
               class="category-btn"
               id=" search-button str"
               data-value="Strength">
-              <img src="Images/STRENGTH CATEGORY.png" />
+              <img src="images/STRENGTH CATEGORY.png" />
             </button>
             <button
               class="category-btn"
               id="search-button tri"
               data-value="Triceps">
-              <img src="Images/TRICEPS CATEGORY.png" alt="Triceps" />
+              <img src="images/TRICEPS CATEGORY.png" alt="Triceps" />
             </button>
           </div>
         </div>
         <button id="nextBtn" class="nav-btn">
-          <img src="Images/NEXT BUTTON.png" />
+          <img src="images/NEXT BUTTON.png" />
         </button>
       </div>
     </section>
@@ -279,15 +276,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -310,15 +305,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -341,15 +334,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images/PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -374,15 +365,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -405,15 +394,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -436,15 +423,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -469,15 +454,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -500,15 +483,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -531,15 +512,13 @@
       <div class="thumbnail">
         <!-- Thumbnail Image -->
         <img
-          src="Images/LOADING ANIM.gif"
+          src="images/LOADING ANIM.gif"
           alt="Thumbnail"
           class="thumbnail-image" />
 
         <div class="PIN-ICON">
           <button>
-            <img
-              src="C:\Program Projects\HCI WEBSITE PROJECT\Images\PIN.png"
-              alt="PIN ICON" />
+            <img src="images\PIN.png" alt="PIN ICON" />
           </button>
         </div>
 
@@ -562,7 +541,7 @@
 
     <!--VIDEO CONTENTS ENDS HERE-->
     <footer>
-      <img src="Images/logo.png" alt="Footer Logo" class="Footer-logo" />
+      <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
     </footer>
   </body>
 </html>

@@ -1,3 +1,5 @@
+//random search gen/
+
 let search = "back";
 async function fetchWorkoutData() {
   const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${search}`;
@@ -24,9 +26,9 @@ async function fetchWorkoutData() {
 function createThumbnail(workout) {
   const thumbnail = document.createElement("div");
   thumbnail.classList.add("thumbnail");
-
+  5;
   const img = document.createElement("img");
-  img.src = workout.gifUrl || "ASSETS/LOADING ANIM.gif";
+  img.src = workout.gifUrl || "images/LOADING ANIM.gif";
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
   5;
@@ -35,7 +37,7 @@ function createThumbnail(workout) {
   pinDiv.classList.add("PIN-ICON");
   const pinBtn = document.createElement("button");
   const pinImg = document.createElement("img");
-  pinImg.src = "ASSETS/PIN.png";
+  pinImg.src = "images/PIN.png";
   pinImg.alt = "PIN ICON";
   pinBtn.appendChild(pinImg);
   pinDiv.appendChild(pinBtn);

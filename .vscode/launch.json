@@ -8,7 +8,14 @@
       "type": "msedge",
       "request": "launch",
       "name": "Open index.html",
-      "file": "C:\\Program Projects\\OFFICIAL CORPUZ WEBSITE\\index.html"
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//index.html"
+    },
+
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open dynamic.html",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//dynamic.html"
     }
   ]
 }
