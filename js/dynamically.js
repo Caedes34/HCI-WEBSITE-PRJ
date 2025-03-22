@@ -34,10 +34,15 @@ function createThumbnail(workout) {
 
   const pinDiv = document.createElement("div");
   pinDiv.classList.add("PIN-ICON");
+
   const pinBtn = document.createElement("button");
+  pinBtn.classList.add("pin-button");
+  pinBtn.setAttribute("data-id", workout.id);
+
   const pinImg = document.createElement("img");
   pinImg.src = "images/PIN.png";
   pinImg.alt = "PIN ICON";
+
   pinBtn.appendChild(pinImg);
   pinDiv.appendChild(pinBtn);
 

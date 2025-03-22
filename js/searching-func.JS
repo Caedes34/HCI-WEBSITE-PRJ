@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   console.log("Searching for...:", workoutname);
   console.log("API URL", API_URL);
 
-  API_URL = `https://exercisedb.p.rapidapi.com/exercises/name/${encodeURIComponent(
+  API_URL = `https://exercisedb.p.rapidapi.com/${encodeURIComponent(
     workoutname
   )}`;
 
