@@ -3,7 +3,7 @@ const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
 
 let currentIndex = 0;
-const itemsPerPage = 5;
+const itemsPerPage = 4;
 const totalItems = document.querySelectorAll(".category-btn").length;
 const totalPages = Math.ceil(totalItems / itemsPerPage);
 

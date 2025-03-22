@@ -46,9 +46,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error fetching", error);
   }
 });
-// get the string value from the user
 
-//the api fetching logic and showing the result
 function fetchExerciseGifs(data) {
   try {
     // Get all thumbnail containers

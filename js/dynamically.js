@@ -1,7 +1,9 @@
-//random search gen/
+async function fetchWorkoutData(workoutName) {
+  if (!workoutName) return []; // Prevent API calls with empty values
 
-async function fetchWorkoutData() {
-  const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${search}`;
+  const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${encodeURIComponent(
+    workoutName
+  )}`;
   const options = {
     method: "GET",
     headers: {
@@ -13,11 +15,10 @@ async function fetchWorkoutData() {
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-
-    console.log("fetched data:", result);
+    console.log("Fetched data:", result);
     return result;
   } catch (error) {
-    console.error(error);
+    console.error("Error fetching data:", error);
     return [];
   }
 }
@@ -25,12 +26,11 @@ async function fetchWorkoutData() {
 function createThumbnail(workout) {
   const thumbnail = document.createElement("div");
   thumbnail.classList.add("thumbnail");
-  5;
+
   const img = document.createElement("img");
   img.src = workout.gifUrl || "images/LOADING ANIM.gif";
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
-  5;
 
   const pinDiv = document.createElement("div");
   pinDiv.classList.add("PIN-ICON");
@@ -75,15 +75,14 @@ function createThumbnail(workout) {
   durationSpan.classList.add("thumbnail-duration");
   durationSpan.textContent = `DURATION: ${workout.duration || "15 min"}`;
 
-  const difficultyLevels = ["Beginner", "Intermediate", "Expert"];
-
+  const difficultyLevels = ["Beginner", "Intermediate", "Average"];
   const difficultySpan = document.createElement("span");
   difficultySpan.classList.add("thumbnail-difficulty");
   difficultySpan.textContent =
     workout.difficulty ||
     difficultyLevels[Math.floor(Math.random() * difficultyLevels.length)];
 
-  metaDiv.appendChild(durationSpan);
+  //   metaDiv.appendChild(durationSpan);
   metaDiv.appendChild(difficultySpan);
 
   infoDiv.appendChild(tagsDiv);
@@ -97,15 +96,29 @@ function createThumbnail(workout) {
   return thumbnail;
 }
 
-async function loadThumbnails() {
-  let workout = await fetchWorkoutData();
+function loadThumbnails(workouts) {
   const container = document.getElementById("thumbnail-container");
   container.innerHTML = "";
 
-  workout.forEach((workout) => {
+  workouts.forEach((workout) => {
     const thumbnail = createThumbnail(workout);
     container.appendChild(thumbnail);
   });
 }
 
-document.addEventListener("DOMContentLoaded", loadThumbnails);
+// Attach event listeners to buttons
+document.querySelectorAll(".category-btn").forEach((button) => {
+  button.addEventListener("click", async function () {
+    let workoutName = this.getAttribute("data-value"); // Get value from button
+    console.log("Fetching workouts for:", workoutName);
+
+    const workouts = await fetchWorkoutData(workoutName);
+    loadThumbnails(workouts);
+  });
+});
+
+// Initial random fetch (optional, can be removed)
+document.addEventListener("DOMContentLoaded", async () => {
+  const defaultWorkouts = await fetchWorkoutData("chest"); // Default category
+  loadThumbnails(defaultWorkouts);
+});

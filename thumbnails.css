@@ -96,18 +96,31 @@
 }
 
 .thumbnail-tags {
-  font-size: 12px;
-  opacity: 0.8;
   display: flex;
-  gap: 5px;
   flex-wrap: wrap;
-  padding-top: 50px;
+  gap: 8px; /* Space between tags */
+  margin-top: 55px;
+  margin-left: 5px;
+}
+.tag {
+  background-color: #f0f0f0; /* Light gray background */
+  color: #333; /* Dark text */
+  font-size: 14px;
+  padding: 5px 10px;
+  border-radius: 15px; /* Rounded edges */
+  display: inline-block;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+.tag:hover {
+  background-color: #ddd; /* Slightly darker on hover */
+  cursor: pointer;
 }
 
 .thumbnail-title {
   font-family: Rubik, sans-serif;
   font-size: 15px;
-  margin: 5px 0;
+  margin: 5px 3px;
   font-weight: bold;
   white-space: normal;
   word-wrap: break-word;
@@ -148,15 +161,27 @@
   border-radius: 10px;
 }
 
-.tag1 {
+.tag {
   background-color: #ff6347;
   color: white;
   font-size: 12px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-radius: 15px;
   font-weight: bold;
   white-space: nowrap;
 }
+
+/*
+tag1 {
+  background-color: #ff6347;
+  color: white;
+  font-size: 12px;
+  padding: 5px 5px;
+  border-radius: 15px;
+  font-weight: bold;
+  white-space: nowrap;
+}
+
 
 .tag2 {
   background-color: #ff6347;
@@ -184,7 +209,7 @@
   border-radius: 15px;
   font-weight: bold;
   white-space: nowrap;
-}
+} */
 .Thumbnail-SET-1 {
   display: flex;
   justify-content: center;
