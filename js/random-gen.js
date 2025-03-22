@@ -5,7 +5,7 @@ const API_URL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/waist";
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "87f5e59955mshdae3a211e701e93p1d5c76jsn6813f7326822", // Replace with your actual API key
+    "X-RapidAPI-Key": "API_KEY_HERE", // Replace with your actual API key
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
