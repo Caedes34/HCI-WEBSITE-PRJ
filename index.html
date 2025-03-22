@@ -113,7 +113,7 @@
             width: 300px;
           " />
         <button
-          onclick="window.location.href='RESULTS PAGE.html'"
+          onclick="event.preventDefault(); window.location.href='RESULTS PAGE.html'"
           type="submit"
           class="search-button">
           <img
@@ -230,9 +230,9 @@
           <div class="categories">
             <button
               class="category-btn"
-              id="Search button car"
+              id="search-button-car"
               data-value="Cardio">
-              <img src="images/CARDIO CATEGORY.png" />
+              <img src="images/CARDIO CATEGORY.png" alt="Cardio Category" />
             </button>
             <button
               class="category-btn"

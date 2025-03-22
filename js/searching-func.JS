@@ -3,6 +3,25 @@ let API_URL = "";
 let response = "";
 let data = [];
 
+function startLoadingBar() {
+  const loadingBar = document.getElementById("loadingBar");
+  loadingBar.style.width = "0%";
+  loadingBar.style.display = "block";
+
+  setTimeout(() => {
+    loadingBar.style.width = "70%";
+  }, 100);
+}
+
+function stopLoadingBar() {
+  const loadingBar = document.getElementById("loadingBar");
+  loadingBar.style.width = "100%";
+
+  setTimeout(() => {
+    loadingBar.style.display = "none";
+  }, 300);
+}
+
 document
   .getElementById("searchForm")
   .addEventListener("submit", async function (event) {
@@ -53,6 +72,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Error fetching", error);
   }
+  startLoadingBar();
 });
 
 function createThumbnail(workout) {

@@ -16,6 +16,13 @@
       "request": "launch",
       "name": "Open dynamic.html",
       "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//dynamic.html"
+    },
+
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open RESULTS.html",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//RESULTS PAGE.html"
     }
   ]
 }

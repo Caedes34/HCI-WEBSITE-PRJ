@@ -6,8 +6,7 @@ document.querySelectorAll(".category-btn").forEach((button) => {
     let workoutname = this.getAttribute("data-value"); // Get value from button
 
     if (!workoutname) return;
-    // window.location.href = `?search=${encodeURIComponent(workoutname)}`;
-    workoutname;
+    window.location.href = `?search=${encodeURIComponent(workoutname)}`;
   });
 });
 
@@ -47,9 +46,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error("Error fetching", error);
   }
 });
+// get the string value from the user
 
+//the api fetching logic and showing the result
 function fetchExerciseGifs(data) {
   try {
+    // Get all thumbnail containers
     const thumbnails = document.querySelectorAll(".thumbnail");
 
     if (data.length === 0) {
@@ -63,8 +65,11 @@ function fetchExerciseGifs(data) {
       const img = thumbnail.querySelector(".thumbnail-image");
       const titleElement = thumbnail.querySelector(".thumbnail-title");
 
+      // Set title and GIF from ExerciseDB API
       img.src = data[index].gifUrl;
       titleElement.textContent = data[index].name;
+
+      // Fetch difficulty and instructions from API-Ninjas API
     });
   } catch (error) {
     console.error("Error fetching exercise GIFs:", error);
