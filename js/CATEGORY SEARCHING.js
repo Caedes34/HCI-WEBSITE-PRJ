@@ -6,7 +6,8 @@ document.querySelectorAll(".category-btn").forEach((button) => {
     let workoutname = this.getAttribute("data-value"); // Get value from button
 
     if (!workoutname) return;
-    window.location.href = `?search=${encodeURIComponent(workoutname)}`;
+    // window.location.href = `?search=${encodeURIComponent(workoutname)}`;
+    workoutname;
   });
 });
 
