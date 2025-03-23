@@ -1,0 +1,184 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #111111;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background: #9ebbe0;
+  padding: 20px;
+  width: 600px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+  transform: scale(1.1);
+  width: 1080px;
+  position: relative;
+}
+
+.back-button {
+  background: white;
+  border-color: black;
+  border-radius: 10px;
+  padding: 5px 5px;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  text-align: left;
+  display: block;
+  margin-bottom: 10px;
+}
+.workout-image-info {
+  display: flex;
+}
+.workout-image {
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+}
+
+h1 {
+  font-size: 24px;
+  margin: 0;
+}
+
+.workout-description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.workout-meta {
+  font-size: bold;
+  color: #777;
+}
+
+.instructions {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.instructions ol {
+  list-style: none;
+  padding: 0;
+  counter-reset: counter-reset;
+}
+
+.instructions li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 14px;
+  counter-increment: step-counter 0;
+}
+
+.instructions li::before {
+  content: counter(step-counter);
+  counter-increment: step-counter 1;
+  background: orange;
+  color: white;
+  font-weight: bold;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.workout-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.workout-image-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0, 4px, 10px rgba(0, 0, 0, 0.1);
+}
+
+.workout-image {
+  width: 280px;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.workout-details {
+  max-width: 400px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.workout-description {
+  font-size: 16px;
+  color: #555;
+}
+
+.workout-meta {
+  font-weight: bold;
+  color: #777;
+}
+
+.image-box {
+  width: 300px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ddd; /* Light gray background */
+  border-radius: 12px; /* Rounded corners */
+  overflow: hidden; /* Ensures the image fits nicely */
+  box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.1);
+  margin-right: 200px;
+}
+.search-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  top: 10px;
+  right: 10px;
+  background: #f8f8f8;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 350px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.search-button:hover {
+  background: #0056b3;
+}

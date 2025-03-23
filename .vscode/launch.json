@@ -14,15 +14,14 @@
     {
       "type": "msedge",
       "request": "launch",
-      "name": "Open dynamic.html",
-      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//dynamic.html"
+      "name": "Open RESULTS.html",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//RESULTS PAGE.html"
     },
-
     {
       "type": "msedge",
       "request": "launch",
-      "name": "Open RESULTS.html",
-      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//RESULTS PAGE.html"
+      "name": "Open info page.html",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//info-Page.html"
     }
   ]
 }
