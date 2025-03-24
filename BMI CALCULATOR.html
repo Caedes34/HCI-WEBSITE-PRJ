@@ -3,28 +3,25 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/homepage.css" />
-    <link rel="stylesheet" href="css/header.css" />
+    <title>BMI Calculator</title>
+
     <link rel="stylesheet" href="css/bmi-calculator.css" />
     <link rel="stylesheet" href="css/calculator.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="thumbnails.css" />
+
     <script src="js/calculator.js" defer></script>
   </head>
   <body>
     <header>
-     
-      <img
-        src="Images/logo.png"
-        alt="Logo"
-        class="logo"
-        style="height: 50px; position: absolute; left: 50px" />
+      <!-- Logo (Positioned to the Left) -->
+      <img src="images/logo.png" alt="Logo" class="logo" />
 
-  
+      <!-- Navigation Links (Centered) -->
       <nav>
         <ul class="nav-links">
-          <li
-            class="nav-home"
-            style="margin: 0 20px; display: flex; align-items: center">
+          <li class="nav-home">
             <a
               href="index.html"
               style="
@@ -34,7 +31,7 @@
                 color: white;
               ">
               <img
-                src="Images/Home.png"
+                src="images/Home.png"
                 alt="Home Icon"
                 style="margin-right: 5px" />
               HOME
@@ -52,7 +49,7 @@
                 color: white;
               ">
               <img
-                src="Images/BMI CALCULATOR.png"
+                src="images/BMI CALCULATOR.png"
                 alt="BMI Calculator Icon"
                 style="margin-right: 5px" />
               BMI CALCULATOR
@@ -70,7 +67,7 @@
                 color: white;
               ">
               <img
-                src="Images/pinn.png"
+                src="images/pinn.png"
                 alt="Pinned Workouts Icon"
                 style="margin-right: 5px" />
               PINNED WORKOUTS
@@ -80,32 +77,30 @@
       </nav>
     </header>
 
-
-    
-
     <div class="container">
       <div class="box">
         <h1>BMI Calculator</h1>
         <div class="content">
           <div class="input">
-            <label for="height">Age</label>
+            <label for="age">Age</label>
             <input
-              type="text"
+              type="number"
               class="text-input"
               id="age"
               autocomplete="off"
+              min="1"
               required />
           </div>
 
           <div class="gender">
             <label class="container">
-              <input type="radio" name="radio" id="m" />
+              <input type="radio" name="gender" id="m" value="male" />
               <p class="text">Male</p>
               <span class="checkmark"></span>
             </label>
 
             <label class="container">
-              <input type="radio" name="radio" id="f" />
+              <input type="radio" name="gender" id="f" value="female" />
               <p class="text">Female</p>
               <span class="checkmark"></span>
             </label>
@@ -113,13 +108,13 @@
 
           <div class="containerHW">
             <div class="inputH">
-              <label for="height">Height(cm)</label>
-              <input type="number" id="height" required />
+              <label for="height">Height (cm)</label>
+              <input type="number" id="height" min="1" required />
             </div>
 
             <div class="inputW">
-              <label for="weight">Weight(kg)</label>
-              <input type="number" id="weight" required />
+              <label for="weight">Weight (kg)</label>
+              <input type="number" id="weight" min="1" required />
             </div>
           </div>
 
@@ -127,26 +122,23 @@
             Calculate BMI
           </button>
         </div>
+
         <div class="result">
           <p>Your BMI is</p>
           <div id="result">00.00</div>
           <p class="comment"></p>
         </div>
-        </div>
       </div>
     </div>
 
- 
     <div id="myModal" class="modal">
- 
       <div class="modal-content">
         <span class="close">&times;</span>
         <p id="modalText"></p>
       </div>
     </div>
-
     <footer>
-      <img src="Images/logo.png" alt="Footer Logo" class="Footer-logo" />
+      <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
     </footer>
   </body>
 </html>

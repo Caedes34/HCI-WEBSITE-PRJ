@@ -5,7 +5,7 @@ async function fetchWorkoutData() {
   const options = {
     method: "GET",
     headers: {
-      "x-rapidapi-key": "API-KEY_HERE"
+      "x-rapidapi-key": "API-KEY_HERE",
       "x-rapidapi-host": "exercisedb.p.rapidapi.com",
     },
   };

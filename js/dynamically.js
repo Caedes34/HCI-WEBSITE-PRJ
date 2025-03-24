@@ -98,6 +98,11 @@ function createThumbnail(workout) {
   thumbnail.appendChild(pinDiv);
   thumbnail.appendChild(infoDiv);
 
+  thumbnail.addEventListener("click", function () {
+    localStorage.setItem("selectedWorkout", JSON.stringify(workout));
+    window.location.href = "info-page.html";
+  });
+
   return thumbnail;
 }
 

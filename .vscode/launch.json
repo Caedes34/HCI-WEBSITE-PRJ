@@ -22,6 +22,12 @@
       "request": "launch",
       "name": "Open info page.html",
       "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//info-Page.html"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "Open Calculator.html",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//BMI CALCULATOR.html"
     }
   ]
 }

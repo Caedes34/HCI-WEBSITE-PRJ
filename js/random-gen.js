@@ -1,11 +1,9 @@
-// API URL for exercises (example: waist exercises)
 const API_URL = "https://exercisedb.p.rapidapi.com/exercises/bodyPart/waist";
 
-// API Headers (Replace with your API key)
 const options = {
   method: "GET",
   headers: {
-    "X-RapidAPI-Key": "API_KEY_HERE", // Replace with your actual API key
+    "X-RapidAPI-Key": "API_KEY_HERE",
     "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
   },
 };
@@ -24,13 +22,12 @@ async function fetchExerciseGifs() {
       return;
     }
 
-    // Loop through images and assign GIFs
     images.forEach((img, index) => {
-      const thumbnail = img.closest(".thumbnail"); // Get the closest thumbnail container
-      const titleElement = thumbnail.querySelector(".thumbnail-title"); // Get the title element
+      const thumbnail = img.closest(".thumbnail");
+      const titleElement = thumbnail.querySelector(".thumbnail-title");
 
       if (data[index] && data[index].gifUrl) {
-        img.src = data[index].gifUrl; // Assign a GIF to each image
+        img.src = data[index].gifUrl;
         titleElement.textContent = data[index].name;
       } else {
         console.warn(`No GIF found for index ${index}, skipping...`);
@@ -41,5 +38,4 @@ async function fetchExerciseGifs() {
   }
 }
 
-// Run the function after page loads
 document.addEventListener("DOMContentLoaded", fetchExerciseGifs);

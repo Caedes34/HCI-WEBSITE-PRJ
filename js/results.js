@@ -90,7 +90,6 @@ function createThumbnail(workout) {
     workout.difficulty ||
     difficultyLevels[Math.floor(Math.random() * difficultyLevels.length)];
 
-  //   metaDiv.appendChild(durationSpan);
   metaDiv.appendChild(difficultySpan);
 
   infoDiv.appendChild(tagsDiv);
@@ -100,6 +99,11 @@ function createThumbnail(workout) {
   thumbnail.appendChild(img);
   thumbnail.appendChild(pinDiv);
   thumbnail.appendChild(infoDiv);
+
+  thumbnail.addEventListener("click", function () {
+    localStorage.setItem("selectedWorkout", JSON.stringify(workout));
+    window.location.href = "info-page.html";
+  });
 
   return thumbnail;
 }
@@ -114,10 +118,9 @@ function loadThumbnails(workouts) {
   });
 }
 
-// Attach event listeners to buttons
 document.querySelectorAll(".category-btn").forEach((button) => {
   button.addEventListener("click", async function () {
-    let workoutName = this.getAttribute("data-value"); // Get value from button
+    let workoutName = this.getAttribute("data-value");
     console.log("Fetching workouts for:", workoutName);
 
     const workouts = await fetchWorkoutData(workoutName);
