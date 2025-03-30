@@ -4,7 +4,7 @@ header {
   align-items: center;
   justify-content: space-between;
   background: #111111;
-  padding: 10px 30px;
+  padding: 5px 5px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -21,7 +21,7 @@ nav {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  padding-right: 110px;
+  padding-right: 190px;
 }
 
 .nav-links {
