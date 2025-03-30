@@ -70,7 +70,7 @@ nav {
   max-width: 900px;
   margin: 100px auto;
   padding: 20px;
-  background: white;
+  background: black;
   border-radius: 10px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -81,14 +81,34 @@ nav {
   gap: 20px;
 }
 
+#workout-title {
+  color: white;
+}
+
 /* Workout Image and Details */
 .workout-image-info {
   display: flex;
   align-items: center;
   gap: 20px;
 }
+#workout-equipment {
+  padding: 5px 10px;
+  margin-top: 5px;
+  background: white;
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+}
+#Difficulty {
+  padding: 5px 10px;
+  background: #ff6347;
+  color: black;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-top: 10px;
+}
 
-.image-box {
+*/ .image-box {
   flex-shrink: 0;
   width: 200px;
   height: 200px;
@@ -111,10 +131,12 @@ nav {
   color: #2c3e50;
 }
 
-.workout-description {
+#workout-description {
   font-size: 16px;
   margin: 10px 0;
-  color: #555;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: white;
 }
 
 .workout-meta {
@@ -125,9 +147,9 @@ nav {
 
 .workout-meta div {
   padding: 5px 10px;
-  background: #3498db;
-  color: white;
-  border-radius: 5px;
+  background: white;
+  color: black;
+  border-radius: 3px;
   font-size: 14px;
 }
 
@@ -138,8 +160,12 @@ nav {
 
 .instructions h2 {
   font-size: 22px;
-  color: #2c3e50;
+  color: white;
   margin-bottom: 15px;
+}
+
+#instructions-list {
+  color: white;
 }
 
 .instructions ol {
@@ -152,7 +178,7 @@ nav {
   line-height: 1.5;
 }
 .instructions ol li::marker {
-  color: black;
+  color: white;
   background-color: yellow;
   font-weight: bold;
   padding: 4px 8px;
@@ -163,7 +189,7 @@ nav {
 footer {
   margin-top: auto;
   padding: 10px 0;
-  background-color: #1c2b38; /* Adjust color if needed */
+  background-color: #111111; /* Adjust color if needed */
   text-align: center;
   width: 100%;
   position: fixed;
