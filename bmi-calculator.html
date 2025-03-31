@@ -3,8 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BMI Calculator</title>
-
+    <title>Document</title>
     <link rel="stylesheet" href="css/bmi-calculator.css" />
     <link rel="stylesheet" href="css/calculator.css" />
     <link rel="stylesheet" href="css/header.css" />
@@ -12,31 +11,25 @@
 
     <script src="js/calculator.js" defer></script>
   </head>
-  <body>
-    <header>
-      <!-- Logo (Positioned to the Left) -->
-      <img src="images/logo.png" alt="Logo" class="logo" />
 
-      <!-- Navigation Links (Centered) -->
-      <nav style="margin-left: 20px">
+  <body>
+    <header class="header">
+      <!-- Logo (Left) -->
+      <a href="index.html">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav class="nav-container">
         <ul class="nav-links">
           <li class="nav-home">
-            <a href="index.html">
-              <img src="images/Home.png" alt="Home Icon" />
-              HOME
-            </a>
+            <a href="index.html"> HOME </a>
           </li>
           <li class="nav-bmi">
-            <a href="BMI CALCULATOR.html">
-              <img src="images/BMI CALCULATOR.png" alt="BMI Calculator Icon" />
+            <a class="bmi-calculator" href="bmi-calculator.html">
               BMI CALCULATOR
             </a>
           </li>
           <li class="nav-pinned">
-            <a href="PinnedWorkouts.html">
-              <img src="images/pinn.png" alt="Pinned Workouts Icon" />
-              PINNED WORKOUTS
-            </a>
+            <a href="PinnedWorkouts.html"> PINNED WORKOUTS </a>
           </li>
         </ul>
       </nav>
@@ -104,6 +97,9 @@
     </div>
     <footer>
       <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
+      <p style="color: wheat">
+        &copy; 2025 Corpuz Workout Website. All rights reserved.
+      </p>
     </footer>
   </body>
 </html>

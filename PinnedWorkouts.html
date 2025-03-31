@@ -3,144 +3,163 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/homepage.css" />
+    <title>Pinned Workouts</title>
+    <link rel="stylesheet" href="css/category.css" />
     <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/pinned-workouts.css" />
+    <link rel="stylesheet" href="css/homepage.css" />
     <link rel="stylesheet" href="thumbnails.css" />
-    <script src="js/pin-func.js"></script>
+    <link rel="stylesheet" href="css/search-bar.css" />
+    <!-- <script src="js/dynamically.js"></script> -->
   </head>
   <body>
-    <header>
-      <img src="images/logo.png" alt="Logo" class="logo" />
-
-      <nav>
+    <header class="header">
+      <!-- Logo (Left) -->
+      <a href="index.html">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav class="nav-container">
         <ul class="nav-links">
           <li class="nav-home">
-            <a href="index.html">
-              <img src="Images/Home.png" alt="Home Icon" />
-              HOME
-            </a>
+            <a href="index.html"> HOME </a>
           </li>
           <li class="nav-bmi">
-            <a href="BMI CALCULATOR.html">
-              <img src="Images/BMI CALCULATOR.png" alt="BMI Calculator Icon" />
+            <a class="bmi-calculator" href="bmi-calculator.html">
               BMI CALCULATOR
             </a>
           </li>
           <li class="nav-pinned">
-            <a href="PinnedWorkouts.html">
-              <img
-                src="Images/pinn.png"
-                alt="Pinned Workouts Icon"
-                style="margin-right: 5px" />
-              PINNED WORKOUTS
-            </a>
+            <a href="PinnedWorkouts.html"> PINNED WORKOUTS </a>
           </li>
         </ul>
       </nav>
     </header>
 
-    <!--logo on the top middle left of the screen -->
-    <div class="pinned_workouts_logo_container">
-      <img src="Images/PINNED WORKOUTS_LOGO.png" class="pinned_workouts_logo" />
-    </div>
+    <script>
+      // Function to load pinned workouts from localStorage
+      function loadPinnedWorkouts() {
+        const container = document.getElementById("pinned-container");
+        const pinnedWorkouts =
+          JSON.parse(localStorage.getItem("pinnedWorkouts")) || [];
 
-    <!-- pinned workouts -->
+        container.innerHTML = "";
 
-    <div class="Thumbnail-SET-1">
-      <div class="thumbnail">
-        <!-- Thumbnail Image -->
-        <img
-          src="images/LOADING ANIM.gif"
-          alt="Thumbnail"
-          class="thumbnail-image" />
+        // If no pinned workouts, show a message
+        if (pinnedWorkouts.length === 0) {
+          const noPinnedMessage = document.createElement("p");
+          noPinnedMessage.textContent = "No workouts pinned yet!";
+          container.appendChild(noPinnedMessage);
+        }
 
-        <div class="PIN-ICON">
-          <button>
-            <img src="images\PIN.png" alt="PIN ICON" />
-          </button>
-        </div>
+        pinnedWorkouts.forEach((workout) => {
+          const thumbnail = document.createElement("div");
+          thumbnail.classList.add("thumbnail");
 
-        <!-- Overlay Content -->
-        <div class="thumbnail-info">
-          <div class="thumbnail-tags">
-            <span class="tag1">Full Body</span>
-            <span class="tag2">Strength</span>
-            <span class="tag3">Cardio</span>
-            <span class="tag4">Duration</span>
-          </div>
-          <h3 class="thumbnail-title">.......</h3>
-          <div class="thumbnail-meta">
-            <span class="thumbnail-duration">DURATION⏳: 15 min</span>
-            <span class="thumbnail-difficulty">Intermediate</span>
-          </div>
-        </div>
-      </div>
+          const img = document.createElement("img");
+          img.src = `http://127.0.0.1:5500/data/images/${workout.images[0]}`;
+          img.alt = "Thumbnail";
+          img.classList.add("thumbnail-image");
 
-      <div class="thumbnail">
-        <!-- Thumbnail Image -->
-        <img
-          src="images/LOADING ANIM.gif"
-          alt="Thumbnail"
-          class="thumbnail-image" />
+          const infoDiv = document.createElement("div");
+          infoDiv.classList.add("thumbnail-info");
 
-        <div class="PIN-ICON">
-          <button>
-            <img src="images\PIN.png" alt="PIN ICON" />
-          </button>
-        </div>
+          const separator = document.createElement("hr");
+          separator.classList.add("thumbnail-separator");
 
-        <!-- Overlay Content -->
-        <div class="thumbnail-info">
-          <div class="thumbnail-tags">
-            <span class="tag1">Full Body</span>
-            <span class="tag2">Strength</span>
-            <span class="tag3">Cardio</span>
-            <span class="tag4">Duration</span>
-          </div>
-          <h3 class="thumbnail-title">.......</h3>
-          <div class="thumbnail-meta">
-            <span class="thumbnail-duration">DURATION⏳: 15 min</span>
-            <span class="thumbnail-difficulty">Intermediate</span>
-          </div>
-        </div>
-      </div>
+          const tagsDiv = document.createElement("div");
+          tagsDiv.classList.add("thumbnail-tags");
 
-      <div class="thumbnail">
-        <!-- Thumbnail Image -->
-        <img
-          src="images/LOADING ANIM.gif"
-          alt="Thumbnail"
-          class="thumbnail-image" />
+          const pinDiv = document.createElement("div");
+          pinDiv.classList.add("PIN-ICON");
 
-        <div class="PIN-ICON">
-          <button>
-            <img src="images/PIN.png" alt="PIN ICON" />
-          </button>
-        </div>
+          const pinBtn = document.createElement("button");
+          pinBtn.classList.add("pin-button");
 
-        <!-- Overlay Content -->
-        <div class="thumbnail-info">
-          <div class="thumbnail-tags">
-            <span class="tag1">Full Body</span>
-            <span class="tag2">Strength</span>
-            <span class="tag3">Cardio</span>
-            <span class="tag4">Duration</span>
-          </div>
-          <h3 class="thumbnail-title">.......</h3>
-          <div class="thumbnail-meta">
-            <span class="thumbnail-duration">DURATION⏳: 15 min</span>
-            <span class="thumbnail-difficulty">Intermediate</span>
-          </div>
-        </div>
-      </div>
-    </div>
+          const pinImg = document.createElement("img");
+          pinImg.src = "images/activated-pin.png";
+          pinImg.alt = "pin-icon";
 
-    <!--ends here -->
+          const deactivatedSrc = "images/deactivated-pin.png";
+          const activatedSrc = "images/activated-pin.png";
+
+          pinBtn.appendChild(pinImg);
+          pinDiv.appendChild(pinBtn);
+
+          const tags = [
+            ...new Set([
+              workout.primaryMuscles,
+              workout.equipment,
+              workout.category,
+              workout.force,
+            ]),
+          ];
+          tags.forEach((tagText) => {
+            if (tagText) {
+              const tag = document.createElement("span");
+              tag.textContent = tagText;
+              tag.classList.add("tag");
+              tagsDiv.appendChild(tag);
+            }
+          });
+
+          const title = document.createElement("h3");
+          title.classList.add("thumbnail-title");
+          title.textContent = workout.name || "\n Workout Name";
+
+          const metaDiv = document.createElement("div");
+          metaDiv.classList.add("thumbnail-meta");
+
+          const difficultySpan = document.createElement("span");
+          difficultySpan.classList.add("thumbnail-difficulty");
+          difficultySpan.textContent = workout.level;
+
+          infoDiv.appendChild(title);
+          infoDiv.appendChild(difficultySpan);
+          infoDiv.appendChild(separator);
+          infoDiv.appendChild(tagsDiv);
+          infoDiv.appendChild(metaDiv);
+          thumbnail.appendChild(img);
+          thumbnail.appendChild(infoDiv);
+          thumbnail.appendChild(pinDiv);
+
+          container.appendChild(thumbnail);
+
+          pinBtn.addEventListener("click", function () {
+            if (pinImg.src.includes(deactivatedSrc)) {
+              pinImg.src = activatedSrc;
+              addToPinnedWorkouts(workout);
+            } else {
+              pinImg.src = deactivatedSrc;
+              removeFromPinnedWorkouts(workout.id);
+            }
+          });
+
+          // Function to remove workout from pinned list in localStorage
+          function removeFromPinnedWorkouts(workoutId) {
+            let pinnedWorkouts =
+              JSON.parse(localStorage.getItem("pinnedWorkouts")) || [];
+
+            pinnedWorkouts = pinnedWorkouts.filter(
+              (workout) => workout.id !== workoutId
+            );
+            localStorage.setItem(
+              "pinnedWorkouts",
+              JSON.stringify(pinnedWorkouts)
+            );
+          }
+        });
+      }
+
+      // Load pinned workouts when the page loads
+      document.addEventListener("DOMContentLoaded", loadPinnedWorkouts);
+    </script>
+
+    <div id="pinned-container" class="Thumbnail-SET-1"></div>
 
     <footer>
-      <img src="Images/logo.png" alt="Footer Logo" class="Footer-logo" />
+      <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
+      <p style="color: wheat">
+        &copy; 2025 Corpuz Workout Website. All rights reserved.
+      </p>
     </footer>
   </body>
 </html>

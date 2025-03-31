@@ -8,196 +8,47 @@
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/homepage.css" />
     <link rel="stylesheet" href="thumbnails.css" />
+    <link rel="stylesheet" href="css/search-bar.css" />
+
     <script src="js/category.js" defer></script>
     <script src="js/dynamically.js" defer></script>
     <script src="js/search.js" defer></script>
-
-  </head> 
+  </head>
   <body>
+    <header class="header">
+      <!-- Logo (Left) -->
+      <a href="index.html">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav class="nav-container">
+        <ul class="nav-links">
+          <li class="nav-home">
+            <a href="index.html"> HOME </a>
+          </li>
+          <li class="nav-bmi">
+            <a class="bmi-calculator" href="bmi-calculator.html">
+              BMI CALCULATOR
+            </a>
+          </li>
+          <li class="nav-pinned">
+            <a href="PinnedWorkouts.html"> PINNED WORKOUTS </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-        <header>
-          <!-- Logo (Positioned to the Left) -->
-          <img src="images/logo.png" alt="Logo" class="logo" />
+    <div class="search-container">
+      <input
+        type="text"
+        placeholder="Search workouts..."
+        class="search-input"
+        id="SearchInput" />
+      <button type="submit" class="search-button" id="search-button">
+        Search
+      </button>
+    </div>
 
-          <!-- Navigation Links (Centered) -->
-          <nav>
-            <ul class="nav-links">
-              <li
-                class="nav-home">
-                <a
-                  href="index.html"
-                  >
-                  <img
-                    src="images/Home.png"
-                    alt="Home Icon"/>
-                  HOME
-                </a>
-              </li>
-              <li class="nav-bmi"
-              >
-                <a class="bmi-calculator"
-                  href="BMI CALCULATOR.html">
-                  <img
-                    src="images/BMI CALCULATOR.png"
-                    alt="BMI Calculator Icon"
-                    />
-                  BMI CALCULATOR
-                </a>
-              </li>
-              <li
-                class="nav-pinned"
-                >
-                <a
-                  href="PinnedWorkouts.html"
-                  
-                  >
-                  <img
-                    src="images/pinn.png"
-                    alt="Pinned Workouts Icon"
-                    />
-                  PINNED WORKOUTS
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-   
-        <main style="background: url('images/background-image.png') no-repeat center center/cover;
-        height: 100vh;
-        width: 100%;" class="main-image"></main>
-
-
-
-        <div
-          style="
-            margin: 20px 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          ">
-            
-              <div class="search-container">
-                <input
-                  type="text"
-                  placeholder="Search workouts..."
-                  class="search-input"
-                  id="SearchInput" />
-                <button
-                  type="submit"
-                  class="search-button"
-                  id="search-button">
-                  Search
-                </button>
-              </div>
-            
-          
-<!-- 
-          <div>
-            <button class="advanced-button" onclick="openModal()">
-              <img src="images/Advance Filters.png" />
-            </button>
-
-            <div
-              class="advanced-button"
-              id="overlay"
-              onclick="closeModal()"></div>
-
-    
-            <div class="modal" id="modal">
-              <button class="close-btn" onclick="closeModal()">X</button>
-              <h2>Advanced Filters</h2>
-              <div class="first-filterset">
-                <p>Workout Type:</p>
-                <div class="Workout-checkboxes">
-                  <label> <input type="checkbox" /> Strength </label>
-                  <br />
-                  <label> <input type="checkbox" /> Cardio </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 3 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 4 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 5 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 6 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 7 </label>
-                  <br />
-                </div>
-              </div>
-
-              <label for="duration">Duration: 1 min </label>
-              <input
-                type="range"
-                id="duration"
-                name="duration"
-                min="5"
-                max="60"
-                step="2"
-                value="30" />
-              <span id="durationValue">30 min</span>
-
-              <div class="second-filterset">
-                <p>Difficulty:</p>
-                <div class="Workout-checkboxes">
-                  <label> <input type="checkbox" /> EASY </label>
-                  <br />
-                  <label> <input type="checkbox" /> Medium </label>
-                  <br />
-                  <label> <input type="checkbox" /> Intermediate </label>
-                  <br />
-                </div>
-              </div>
-
-              <div class="first-filterset">
-                <p>Muscle Group:</p>
-                <div class="Workout-checkboxes">
-                  <label> <input type="checkbox" /> Filter 1 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 2 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 3 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 4 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 5 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 6 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 7 </label>
-                  <br />
-                </div>
-              </div>
-
-              <div class="first-filterset">
-                <p>Goal:</p>
-                <div class="Workout-checkboxes">
-                  <label> <input type="checkbox" /> Filter 1 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 2 </label>`
-                  <br />
-                  <label> <input type="checkbox" /> Filter 3 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 4 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 5 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 6 </label>
-                  <br />
-                  <label> <input type="checkbox" /> Filter 7 </label>
-                  <br />
-                </div>
-              </div>
-              <button class="open-btn" onclick="closeModal()">
-                Apply Filters
-              </button>
-              <button class="open-btn" onclick="resetFilters()">RESET</button>
-            </div>
-          </div> -->
-        </div>
-
-        <section>
+    <section>
       <div class="category-container">
         <button id="prevBtn" class="nav-btn">
           <img src="images/PREV BUTTON.png" />
@@ -206,21 +57,23 @@
           <div class="categories">
             <button
               class="category-btn"
-              id="search-button-car"
+              id="search-button-cardio"
               data-value="cardio">
-              <img src="images/Cardio Category.png " alt="Cardio Category" />
+              <img src="images/Cardio Category.png " alt="cardio-category" />
             </button>
             <button
               class="category-btn"
               id="Search button back"
               data-value="back">
-              <img src="images/BACK CATEGORY.png  " />
+              <img src="images/BACK CATEGORY.png  " alt="back-category" />
             </button>
             <button
               class="category-btn"
               id="Search button "
               data-value="upper arms">
-              <img src="images/Upper Arms Category.png" />
+              <img
+                src="images/Upper Arms Category.png"
+                alt="upper-arm-category" />
             </button>
             <button
               class="category-btn"
@@ -271,17 +124,17 @@
         </button>
       </div>
     </section>
-        <!-- Corrected closing tag for the section -->
 
-        <!--VIDEO CONTENTS-->
-        <div id="thumbnail-container" class="Thumbnail-SET-1"></div>
+    <!--VIDEO CONTENTS-->
+    <div id="thumbnail-container" class="Thumbnail-SET-1"></div>
 
-        <!--VIDEO CONTENTS ENDS HERE-->
+    <!--VIDEO CONTENTS ENDS HERE-->
 
-        <footer>
-          <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
-        </footer>
-      </body>
-    
+    <footer>
+      <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
+      <p style="color: wheat">
+        &copy; 2025 Corpuz Workout Website. All rights reserved.
+      </p>
+    </footer>
   </body>
 </html>

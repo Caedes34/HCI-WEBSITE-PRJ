@@ -28,6 +28,18 @@
       "request": "launch",
       "name": "Open Calculator.html",
       "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//BMI CALCULATOR.html"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "youtube",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//youtube proto.html"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "pin",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//pinn.html"
     }
   ]
 }

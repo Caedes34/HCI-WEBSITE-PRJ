@@ -12,11 +12,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-function handlesearch() {
+async function handlesearch() {
   const searchInput = document.getElementById("SearchInput").value.trim();
-  if (!searchInput) return alert("Please enter valid!");
+  if (!searchInput) return alert("Please enter a valid search term!");
 
-  window.location.href = `RESULTS PAGE.html?query=${encodeURIComponent(
-    searchInput
-  )}`;
+  window.location.href = `index.html?query=${encodeURIComponent(searchInput)}`;
 }

@@ -158,6 +158,18 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("workout-description").textContent =
         workoutDescription;
 
+      function generateYouTubeLink(workoutName) {
+        let query = encodeURIComponent(workoutName + " tutorial");
+        let youtubeSearchURL = `https://www.youtube.com/results?search_query=${query}`;
+
+        let linkElement = document.getElementById("youtube-video");
+        linkElement.href = youtubeSearchURL;
+        linkElement.innerText = `Watch ${workoutName} Tutorial`;
+      }
+
+      let workoutName = workout.name;
+      generateYouTubeLink(workoutName);
+
       // Instructions list
       const instructionsList = document.getElementById("instructions-list");
       instructionsList.innerHTML = "";

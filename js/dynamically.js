@@ -18,28 +18,38 @@ function createThumbnail(workout) {
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
 
+  const infoDiv = document.createElement("div");
+  infoDiv.classList.add("thumbnail-info");
+
+  const separator = document.createElement("hr");
+  separator.classList.add("thumbnail-separator");
+
+  const tagsDiv = document.createElement("div");
+  tagsDiv.classList.add("thumbnail-tags");
+
   const pinDiv = document.createElement("div");
   pinDiv.classList.add("PIN-ICON");
 
   const pinBtn = document.createElement("button");
   pinBtn.classList.add("pin-button");
-  pinBtn.setAttribute("data-id", workout.id);
 
   const pinImg = document.createElement("img");
-  pinImg.src = "images/PIN.png";
-  pinImg.alt = "PIN ICON";
+  pinImg.src = "images/deactivated-pin.png";
+  pinImg.alt = "pin-icon";
+
+  const deactivatedSrc = "images/deactivated-pin.png";
+  const activatedSrc = "images/activated-pin.png";
 
   pinBtn.appendChild(pinImg);
   pinDiv.appendChild(pinBtn);
 
-  const infoDiv = document.createElement("div");
-  infoDiv.classList.add("thumbnail-info");
-
-  const tagsDiv = document.createElement("div");
-  tagsDiv.classList.add("thumbnail-tags");
-
   const tags = [
-    ...new Set([workout.primaryMuscles, workout.equipment, workout.category]),
+    ...new Set([
+      workout.primaryMuscles,
+      workout.equipment,
+      workout.category,
+      workout.force,
+    ]),
   ];
   tags.forEach((tagText) => {
     if (tagText) {
@@ -52,42 +62,66 @@ function createThumbnail(workout) {
 
   const title = document.createElement("h3");
   title.classList.add("thumbnail-title");
-  title.textContent = workout.name || "Workout Name";
+  title.textContent = workout.name || "\n Workout Name";
 
   const metaDiv = document.createElement("div");
   metaDiv.classList.add("thumbnail-meta");
-
-  const durationSpan = document.createElement("span");
-  durationSpan.classList.add("thumbnail-duration");
-  durationSpan.textContent = `DURATION: ${workout.duration || "15 min"}`;
 
   const difficultySpan = document.createElement("span");
   difficultySpan.classList.add("thumbnail-difficulty");
   difficultySpan.textContent = workout.level;
 
-  metaDiv.appendChild(difficultySpan);
-
-  infoDiv.appendChild(tagsDiv);
   infoDiv.appendChild(title);
+  infoDiv.appendChild(difficultySpan);
+  infoDiv.appendChild(separator);
+  infoDiv.appendChild(tagsDiv);
   infoDiv.appendChild(metaDiv);
-
   thumbnail.appendChild(img);
-  thumbnail.appendChild(pinDiv);
   thumbnail.appendChild(infoDiv);
+  thumbnail.appendChild(pinDiv);
 
   thumbnail.addEventListener("click", function () {
     localStorage.setItem("selectedWorkout", JSON.stringify(workout));
     window.location.href = "info-page.html";
   });
 
+  pinBtn.addEventListener("click", function () {
+    if (pinImg.src.includes(deactivatedSrc)) {
+      pinImg.src = activatedSrc; // Change to activated pin
+      addToPinnedWorkouts(workout); // Save to localStorage
+    } else {
+      pinImg.src = deactivatedSrc; // Change to deactivated pin
+      removeFromPinnedWorkouts(workout.id); // Remove from localStorage
+    }
+  });
+
   return thumbnail;
+}
+
+// Function to add workout to pinned list in localStorage
+function addToPinnedWorkouts(workout) {
+  let pinnedWorkouts = JSON.parse(localStorage.getItem("pinnedWorkouts")) || [];
+
+  // Add workout if it's not already in pinned workouts
+  if (!pinnedWorkouts.some((pinned) => pinned.id === workout.id)) {
+    pinnedWorkouts.push(workout);
+    localStorage.setItem("pinnedWorkouts", JSON.stringify(pinnedWorkouts));
+  }
+}
+
+// Function to remove workout from pinned list in localStorage
+function removeFromPinnedWorkouts(workoutId) {
+  let pinnedWorkouts = JSON.parse(localStorage.getItem("pinnedWorkouts")) || [];
+
+  pinnedWorkouts = pinnedWorkouts.filter((workout) => workout.id !== workoutId);
+  localStorage.setItem("pinnedWorkouts", JSON.stringify(pinnedWorkouts));
 }
 
 function loadThumbnails(workouts) {
   const container = document.getElementById("thumbnail-container");
   container.innerHTML = "";
 
-  const limitedWorkouts = workouts.slice(0, 10);
+  const limitedWorkouts = workouts.slice(0, 30);
 
   limitedWorkouts.forEach((workout) => {
     const thumbnail = createThumbnail(workout);

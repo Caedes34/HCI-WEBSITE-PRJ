@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RESULTS</title>
+    <link rel="stylesheet" href="css/homepage.css" />
+    <link rel="stylesheet" href="css/header.css" />
+    <link rel="stylesheet" href="thumbnails.css" />
+    <link rel="stylesheet" href="css/search-bar.css" />
+    <script src="js/search.js"></script>
+    <script src="js/results.js"></script>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Logo (Left) -->
+      <img src="images/logo.png" alt="Logo" class="logo" />
+
+      <!-- Navigation Links (Right) -->
+      <nav>
+        <ul class="nav-links">
+          <li class="nav-home">
+            <a href="index.html">
+              <img src="images/Home.png" alt="Home Icon" /> HOME
+            </a>
+          </li>
+          <li class="nav-bmi">
+            <a class="bmi-calculator" href="BMI CALCULATOR.html">
+              <img src="images/BMI CALCULATOR.png" alt="BMI Calculator Icon" />
+              BMI CALCULATOR
+            </a>
+          </li>
+          <li class="nav-pinned">
+            <a href="PinnedWorkouts.html">
+              <img src="images/pinn.png" alt="Pinned Workouts Icon" /> PINNED
+              WORKOUTS
+            </a>
+          </li>
+        </ul>
+        <div class="search-container">
+          <input
+            type="text"
+            placeholder="Search workouts..."
+            class="search-input"
+            id="SearchInput" />
+          <button type="submit" class="search-button" id="search-button">
+            Search
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div id="thumbnail-container" class="Thumbnail-SET-1"></div>
+  </body>
+</html>
