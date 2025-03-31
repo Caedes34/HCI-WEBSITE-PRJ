@@ -7,21 +7,13 @@ async function fetchWorkoutData(workoutName) {
   const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${encodeURIComponent(
     workoutName
   )}`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "87f5e59955mshdae3a211e701e93p1d5c76jsn6813f7326822",
-      "x-rapidapi-host": "exercisedb.p.rapidapi.com",
-    },
-  };
 
   try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    console.log("Fetched data:", result);
-    return result;
+    const response = await fetch("../data/exercises.json");
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching data on json", error);
     return [];
   }
 }
@@ -31,7 +23,9 @@ function createThumbnail(workout) {
   thumbnail.classList.add("thumbnail");
 
   const img = document.createElement("img");
-  img.src = workout.gifUrl || "images/LOADING ANIM.gif";
+  img.src =
+    `http://127.0.0.1:5500/data/images/${workout.images[0]}` ||
+    "images/LOADING ANIM.gif";
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
 
@@ -59,8 +53,8 @@ function createThumbnail(workout) {
     ...new Set([
       workout.bodyPart,
       workout.equipment,
-      workout.target,
-      ...(workout.secondaryMuscles || []),
+      workout.primaryMuscles,
+      workout.category,
     ]),
   ];
   tags.forEach((tagText) => {

@@ -1,24 +1,10 @@
-async function fetchWorkoutData(workoutName) {
-  if (!workoutName) return []; // Prevent API calls with empty values
-
-  const url = `https://exercisedb.p.rapidapi.com/exercises/bodyPart/${encodeURIComponent(
-    workoutName
-  )}?limit=5`;
-  const options = {
-    method: "GET",
-    headers: {
-      "x-rapidapi-key": "238abb5f00mshe29a216e0e46d08p1a860cjsnea37428f2568",
-      "x-rapidapi-host": "exercisedb.p.rapidapi.com",
-    },
-  };
-
+async function fetchWorkoutData() {
   try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    console.log("Fetched data:", result);
-    return result;
+    const response = await fetch("../data/exercises.json");
+    const data = await response.json();
+    return data;
   } catch (error) {
-    console.error("Error fetching data:", error);
+    console.error("Error fetching data on json", error);
     return [];
   }
 }
@@ -28,7 +14,7 @@ function createThumbnail(workout) {
   thumbnail.classList.add("thumbnail");
 
   const img = document.createElement("img");
-  img.src = workout.gifUrl || "images/LOADING ANIM.gif";
+  img.src = `http://127.0.0.1:5500/data/images/${workout.images[0]}`;
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
 
@@ -53,12 +39,7 @@ function createThumbnail(workout) {
   tagsDiv.classList.add("thumbnail-tags");
 
   const tags = [
-    ...new Set([
-      workout.bodyPart,
-      workout.equipment,
-      workout.target,
-      ...workout.secondaryMuscles,
-    ]),
+    ...new Set([workout.primaryMuscles, workout.equipment, workout.category]),
   ];
   tags.forEach((tagText) => {
     if (tagText) {
@@ -80,14 +61,10 @@ function createThumbnail(workout) {
   durationSpan.classList.add("thumbnail-duration");
   durationSpan.textContent = `DURATION: ${workout.duration || "15 min"}`;
 
-  const difficultyLevels = ["Beginner", "Intermediate", "Average"];
   const difficultySpan = document.createElement("span");
   difficultySpan.classList.add("thumbnail-difficulty");
-  difficultySpan.textContent =
-    workout.difficulty ||
-    difficultyLevels[Math.floor(Math.random() * difficultyLevels.length)];
+  difficultySpan.textContent = workout.level;
 
-  //   metaDiv.appendChild(durationSpan);
   metaDiv.appendChild(difficultySpan);
 
   infoDiv.appendChild(tagsDiv);
@@ -110,7 +87,9 @@ function loadThumbnails(workouts) {
   const container = document.getElementById("thumbnail-container");
   container.innerHTML = "";
 
-  workouts.forEach((workout) => {
+  const limitedWorkouts = workouts.slice(0, 10);
+
+  limitedWorkouts.forEach((workout) => {
     const thumbnail = createThumbnail(workout);
     container.appendChild(thumbnail);
   });
@@ -119,16 +98,27 @@ function loadThumbnails(workouts) {
 // Attach event listeners to buttons
 document.querySelectorAll(".category-btn").forEach((button) => {
   button.addEventListener("click", async function () {
-    let workoutName = this.getAttribute("data-value"); // Get value from button
-    console.log("Fetching workouts for:", workoutName);
+    let category = this.getAttribute("data-value");
+    console.log("Fetching workouts for:", category);
 
-    const workouts = await fetchWorkoutData(workoutName);
-    loadThumbnails(workouts);
+    try {
+      const workouts = await fetchWorkoutData();
+      const filteredWorkouts = workouts.filter(
+        (workout) => workout.category === category
+      );
+      loadThumbnails(filteredWorkouts);
+    } catch (error) {
+      console.error("Error loading workouts", error);
+    }
   });
 });
 
 // Initial random fetch (optional, can be removed)
 document.addEventListener("DOMContentLoaded", async () => {
-  const defaultWorkouts = await fetchWorkoutData("chest"); // Default category
-  loadThumbnails(defaultWorkouts);
+  try {
+    const defaultWorkouts = await fetchWorkoutData("chest"); // Default category
+    loadThumbnails(defaultWorkouts);
+  } catch (error) {
+    console.error("Error loading default workouts", error);
+  }
 });
