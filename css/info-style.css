@@ -12,60 +12,6 @@ body {
   padding: 0;
 }
 
-/* Header Styling */
-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background: #111111;
-  padding: 10px 30px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-}
-
-.logo {
-  height: 50px;
-}
-
-nav {
-  flex-grow: 1;
-  display: flex;
-  justify-content: center;
-  padding-right: 110px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links li {
-  display: flex;
-  align-items: center;
-  padding: 8px 12px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  transition: 0.3s;
-}
-
-.nav-links a img {
-  width: 18px;
-  margin-right: 8px;
-}
-
-.nav-links a:hover {
-  color: #f39c12;
-}
-
 .container {
   max-width: 900px;
   margin: 100px auto;

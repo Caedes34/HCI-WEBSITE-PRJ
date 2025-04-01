@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  top: 100px; /* Adjust as needed */
+  top: 100px;
   left: 46%;
   transform: translateX(-50%);
   background: #f8f8f8;

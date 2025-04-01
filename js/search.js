@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const searchButton = document.getElementById("search-button");
-  const searchInput = document.getElementById("SearchInput");
+  const searchInput = document.getElementById("search-input");
 
   if (searchButton && searchInput) {
     searchButton.addEventListener("click", handlesearch);
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 async function handlesearch() {
-  const searchInput = document.getElementById("SearchInput").value.trim();
+  const searchInput = document.getElementById("search-input").value.trim();
   if (!searchInput) return alert("Please enter a valid search term!");
 
   window.location.href = `index.html?query=${encodeURIComponent(searchInput)}`;

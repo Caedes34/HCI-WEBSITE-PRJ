@@ -86,6 +86,7 @@ function createThumbnail(workout) {
   });
 
   pinBtn.addEventListener("click", function () {
+    event.stopPropagation();
     if (pinImg.src.includes(deactivatedSrc)) {
       pinImg.src = activatedSrc; // Change to activated pin
       addToPinnedWorkouts(workout); // Save to localStorage
@@ -150,7 +151,7 @@ document.querySelectorAll(".category-btn").forEach((button) => {
 // Initial random fetch (optional, can be removed)
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const defaultWorkouts = await fetchWorkoutData("chest"); // Default category
+    const defaultWorkouts = await fetchWorkoutData("cardio"); // Default category
     loadThumbnails(defaultWorkouts);
   } catch (error) {
     console.error("Error loading default workouts", error);

@@ -5,67 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Recipe Page</title>
     <link rel="stylesheet" href="css/info-style.css" />
+    <link rel="stylesheet" href="css/header.css" />
+
     <script src="js/info-page.js" defer></script>
   </head>
   <body>
-    <header>
-      <!-- Logo (Positioned to the Left) -->
-      <img src="images/logo.png" alt="Logo" class="logo" />
-
-      <!-- Navigation Links (Centered) -->
-      <nav>
+    <header class="header">
+      <!-- Logo (Left) -->
+      <a href="index.html">
+        <img src="images/logo.png" alt="Logo" class="logo" />
+      </a>
+      <nav class="nav-container">
         <ul class="nav-links">
           <li class="nav-home">
-            <a
-              href="index.html"
-              style="
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: white;
-              ">
-              <img
-                src="images/Home.png"
-                alt="Home Icon"
-                style="margin-right: 5px" />
-              HOME
-            </a>
+            <a href="index.html">WORKOUTS</a>
           </li>
-          <li
-            class="nav-bmi"
-            style="margin: 0 20px; display: flex; align-items: center">
-            <a
-              href="bmi-calculator.html"
-              style="
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: white;
-              ">
-              <img
-                src="images/BMI CALCULATOR.png"
-                alt="BMI Calculator Icon"
-                style="margin-right: 5px" />
+          <li class="nav-bmi">
+            <a class="bmi-calculator" href="bmi-calculator.html">
               BMI CALCULATOR
             </a>
           </li>
-          <li
-            class="nav-pinned"
-            style="margin: 0 20px; display: flex; align-items: center">
-            <a
-              href="PinnedWorkouts.html"
-              style="
-                display: flex;
-                align-items: center;
-                text-decoration: none;
-                color: white;
-              ">
-              <img
-                src="images/pinn.png"
-                alt="Pinned Workouts Icon"
-                style="margin-right: 5px" />
-              PINNED WORKOUTS
-            </a>
+          <li class="nav-pinned">
+            <a href="PinnedWorkouts.html"> PINNED WORKOUTS </a>
           </li>
         </ul>
       </nav>
@@ -105,7 +66,6 @@
         <a href="#" target="_blank" id="youtube-video">Watch Tutorial</a>
       </div>
     </div>
-
     <footer>
       <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
     </footer>
