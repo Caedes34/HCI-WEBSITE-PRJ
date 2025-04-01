@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Sidebar</title>
+    <style>
+      /* Sidebar Styling */
+      .sidebar {
+        position: fixed;
+        top: 0;
+        right: -300px; /* Hidden by default */
+        width: 250px;
+        height: 100vh;
+        background: #f4f4f4;
+        transition: 0.3s ease-in-out;
+        padding: 10px;
+        box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+        overflow-y: auto; /* Makes sidebar scrollable */
+      }
+
+      /* When active, slide into view */
+      .sidebar.active {
+        right: 0;
+      }
+
+      /* Sidebar Header */
+      .sidebar h2 {
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+      }
+
+      /* Filter items (Dropdown Button) */
+      .filter-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        background: white;
+        margin: 5px 0;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      /* Dropdown Content (Hidden by default) */
+      .dropdown-content {
+        display: none;
+        padding: 10px;
+        background: #ddd;
+        border-radius: 5px;
+        margin-top: 5px;
+      }
+
+      /* Show dropdown when active */
+      .dropdown.active {
+        display: block;
+      }
+
+      /* Open Button */
+      .open-btn {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        padding: 10px 15px;
+        background: #007bff;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        z-index: 1000; /* Ensures it stays on top */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Open Sidebar Button -->
+    <button class="open-btn" onclick="toggleSidebar()">Filters</button>
+
+    <!-- Sidebar -->
+    <div id="filterSidebar" class="sidebar">
+      <h2>Filters</h2>
+
+      <div class="filter-item" onclick="toggleDropdown('bodyFocus')">
+        <span>Body Focus</span> <span>▼</span>
+      </div>
+      <div id="bodyFocus" class="dropdown-content">
+        <p>Arms</p>
+        <p>Legs</p>
+        <p>Core</p>
+      </div>
+
+      <div class="filter-item" onclick="toggleDropdown('duration')">
+        <span>Duration</span> <span>▼</span>
+      </div>
+      <div id="duration" class="dropdown-content">
+        <p>10 mins</p>
+        <p>30 mins</p>
+        <p>1 hour</p>
+      </div>
+
+      <div class="filter-item" onclick="toggleDropdown('trainingType')">
+        <span>Training Type</span> <span>▼</span>
+      </div>
+      <div id="trainingType" class="dropdown-content">
+        <p>Strength</p>
+        <p>Cardio</p>
+        <p>Flexibility</p>
+      </div>
+
+      <div class="filter-item" onclick="toggleDropdown('equipment')">
+        <span>Equipment</span> <span>▼</span>
+      </div>
+      <div id="equipment" class="dropdown-content">
+        <p>Dumbbells</p>
+        <p>Resistance Bands</p>
+        <p>Bodyweight</p>
+      </div>
+    </div>
+
+    <script>
+      function toggleSidebar() {
+        document.getElementById("filterSidebar").classList.toggle("active");
+      }
+
+      function toggleDropdown(id) {
+        document.getElementById(id).classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
