@@ -1,0 +1,44 @@
+.filter-container {
+  position: absolute;
+  top: 51.7%; /* Positions container 10% from top */
+  margin-left: 74px;
+  width: 285px;
+  height: 80vh; /* Leaves some space at the bottom */
+  padding: 20px 10px 10px; /* Add top padding instead of margin */
+  background: #f4f4f4;
+  padding: 10px;
+  box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll; /* Enables scrolling when content overflows */
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background: white;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Dropdown Content (Hidden by default) */
+.dropdown-content {
+  display: none;
+  padding: 10px;
+  background: #ddd;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+.dropdown-content label {
+  border-radius: 5px;
+  margin: 1px;
+  display: flex;
+}
+
+/* Show dropdown when active */
+.dropdown-content.active {
+  display: block;
+}

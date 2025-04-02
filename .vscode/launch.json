@@ -46,6 +46,12 @@
       "request": "launch",
       "name": "prototype",
       "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//prototype.html"
+    },
+    {
+      "type": "msedge",
+      "request": "launch",
+      "name": "prototype",
+      "file": "C://Program Projects//OFFICIAL CORPUZ WEBSITE//lmao.html"
     }
   ]
 }

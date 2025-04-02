@@ -1,16 +1,14 @@
 .search-container {
   position: absolute;
   display: flex;
+  height: 35px;
   align-items: center;
-  gap: 10px;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-  background: white;
+  top: 43.9%;
+  left: 5%;
+  background-color: gainsboro;
   padding: 10px;
-  border-radius: 8px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-  width: 350px;
+  width: 285px;
 }
 
 .search-input {
@@ -20,17 +18,17 @@
   border-radius: 5px;
   outline: none;
   font-size: 16px;
+  width: 150px;
 }
 
 .search-button {
-  background: #111;
-  color: white;
   border: none;
   padding: 10px 10px;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 11px;
   transition: 0.3s;
+  margin-left: 10px;
 }
 
 .search-button:hover {

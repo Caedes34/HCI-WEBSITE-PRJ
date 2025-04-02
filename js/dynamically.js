@@ -151,7 +151,7 @@ document.querySelectorAll(".category-btn").forEach((button) => {
 // Initial random fetch (optional, can be removed)
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const defaultWorkouts = await fetchWorkoutData("cardio"); // Default category
+    const defaultWorkouts = await fetchWorkoutData(category); // Default category
     loadThumbnails(defaultWorkouts);
   } catch (error) {
     console.error("Error loading default workouts", error);

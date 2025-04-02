@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Corpuz | Workouts</title>
+    <link rel="icon" href="images/logoc.png" type="image/png" />
     <link rel="stylesheet" href="css/category.css" />
     <link rel="stylesheet" href="css/header.css" />
     <link rel="stylesheet" href="css/homepage.css" />
     <link rel="stylesheet" href="thumbnails.css" />
     <link rel="stylesheet" href="css/search-bar.css" />
-
+    <link rel="stylesheet" href="css/filter.css" />
+    <script src="js/filter.js" defer></script>
+    <!-- <script src="js/results.js" defer></script> -->
     <script src="js/category.js" defer></script>
     <script src="js/dynamically.js" defer></script>
     <script src="js/search.js" defer></script>
@@ -47,7 +50,7 @@
             <button
               class="category-btn"
               id="search-button-cardio"
-              data-value="cardio">
+              data-value="stretching">
               <img src="images/Cardio Category.png " alt="cardio-category" />
             </button>
             <button
@@ -79,7 +82,7 @@
             <button
               class="category-btn"
               id="search-button chest"
-              data-value="chests">
+              data-value="hamstrings">
               <img src="images/Chest Category.png" alt="Chest" />
             </button>
             <button
@@ -123,16 +126,99 @@
       <button type="submit" class="search-button" id="search-button">🔍</button>
     </div>
 
-    <!--VIDEO CONTENTS-->
+    <!-- Sidebar -->
+    <div class="filter-backgroundcolor">
+      <div class="filter-container">
+        <h2>Filters</h2>
+
+        <div class="filter-item" onclick="toggleDropdown('bodyFocus')">
+          <span>Primary Muscle</span> <span>▼</span>
+        </div>
+        <div id="bodyFocus" class="dropdown-content">
+          <label><input type="checkbox" /> Abdominals</label>
+          <label><input type="checkbox" /> Abductors</label>
+          <label><input type="checkbox" /> Adductors</label>
+          <label><input type="checkbox" /> Biceps</label>
+          <label><input type="checkbox" /> Calves</label>
+          <label><input type="checkbox" /> Forearms</label>
+          <label><input type="checkbox" /> Glutes</label>
+          <label><input type="checkbox" /> Hamstrings</label>
+          <label><input type="checkbox" /> Lower Back</label>
+          <label><input type="checkbox" /> Lats</label>
+          <label><input type="checkbox" /> Middle Back</label>
+          <label><input type="checkbox" /> Neck</label>
+          <label><input type="checkbox" /> Quadriceps</label>
+          <label><input type="checkbox" /> Shoulders</label>
+          <label><input type="checkbox" /> Traps</label>
+          <label><input type="checkbox" /> Triceps</label>
+        </div>
+
+        <div class="filter-item" onclick="toggleDropdown('force')">
+          <span>Force</span> <span>▼</span>
+        </div>
+        <div id="force" class="dropdown-content">
+          <label><input type="checkbox" /> Static</label>
+          <label><input type="checkbox" /> Pull</label>
+          <label><input type="checkbox" /> Push</label>
+        </div>
+
+        <div class="filter-item" onclick="toggleDropdown('mechanic')">
+          <span>Mechanic</span> <span>▼</span>
+        </div>
+        <div id="mechanic" class="dropdown-content">
+          <label><input type="checkbox" /> Isolation</label>
+          <label><input type="checkbox" /> Compound</label>
+        </div>
+
+        <div class="filter-item" onclick="toggleDropdown('category')">
+          <span>Category</span> <span>▼</span>
+        </div>
+        <div id="category" class="dropdown-content">
+          <label><input type="checkbox" /> Powerlifting</label>
+          <label><input type="checkbox" /> Strength</label>
+          <label><input type="checkbox" /> Stretching</label>
+          <label><input type="checkbox" /> Cardio</label>
+          <label><input type="checkbox" /> Olympic Weightlifting</label>
+          <label><input type="checkbox" /> Strongman</label>
+          <label><input type="checkbox" /> Plyometrics</label>
+        </div>
+
+        <div class="filter-item" onclick="toggleDropdown('level')">
+          <span>Level</span> <span>▼</span>
+        </div>
+        <div id="level" class="dropdown-content">
+          <label><input type="checkbox" /> Beginner</label>
+          <label><input type="checkbox" /> Intermediate</label>
+          <label><input type="checkbox" /> Expert</label>
+        </div>
+
+        <div class="filter-item" onclick="toggleDropdown('equipment')">
+          <span>Equipment</span> <span>▼</span>
+        </div>
+        <div id="equipment" class="dropdown-content">
+          <label><input type="checkbox" /> Medicine Ball</label>
+          <label><input type="checkbox" /> Dumbbell</label>
+          <label><input type="checkbox" /> Body Only</label>
+          <label><input type="checkbox" /> Bands</label>
+          <label><input type="checkbox" /> Kettlebells</label>
+          <label><input type="checkbox" /> Foam Roll</label>
+          <label><input type="checkbox" /> Cable</label>
+          <label><input type="checkbox" /> Machine</label>
+          <label><input type="checkbox" /> Barbell</label>
+          <label><input type="checkbox" /> Exercise Ball</label>
+          <label><input type="checkbox" /> E-Z Curl Bar</label>
+        </div>
+      </div>
+    </div>
+
+    <!--CONTENTS-->
+    <div id="result-header">Results:</div>
     <div id="thumbnail-container" class="Thumbnail-SET-1"></div>
 
-    <!--VIDEO CONTENTS ENDS HERE-->
+    <!--CONTENTS ENDS HERE-->
 
     <footer>
       <img src="images/logo.png" alt="Footer Logo" class="Footer-logo" />
-      <p style="color: wheat">
-        &copy; 2025 Corpuz Workout Website. All rights reserved.
-      </p>
     </footer>
   </body>
 </html>

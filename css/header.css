@@ -2,7 +2,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: gray;
+  background: black;
   font-family: "Oswald", sans-serif;
   position: fixed;
   top: 0;
@@ -90,44 +90,7 @@ footer {
     height: 50px;
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
-
-  .search-container {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #111;
-    padding: 6px;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 280px; /* Adjust for smaller screens */
     transform: scale(1);
-  }
-
-  /* Search Input */
-  .search-input {
-    flex: 1;
-    padding: 6px;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 14px;
-  }
-
-  /* Search Button */
-  .search-button {
-    background: #007bff;
-    color: white;
-    border: none;
-    padding: 6px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    transition: 0.3s;
-  }
-
-  .search-button:hover {
-    background: #0056b3;
   }
 
   /* Navigation */
