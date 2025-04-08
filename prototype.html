@@ -9,6 +9,51 @@
     <style></style>
   </head>
   <body>
-    <script></script>
+    <div class="filter-item" onclick="toggleDropdown('bodyFocus')"></div>
+        <span>Primary Muscle</span> <span>▼</span>
+      </div>
+      <div id="bodyFocus" class="dropdown-content"></div>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="abdominals" /> Abdominals</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="abductors" /> Abductors</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="adductors" /> Adductors</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="biceps" /> Biceps</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="calves" /> Calves</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="forearms" /> Forearms</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="glutes" /> Glutes</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="hamstrings" /> Hamstrings</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="lower-back" /> Lower Back</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="lats" /> Lats</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="middle-back" /> Middle Back</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="neck" /> Neck</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="quadriceps" /> Quadriceps</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="shoulders" /> Shoulders</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="traps" /> Traps</label>
+        <label><input type="checkbox" class="filter-checkbox" data-filter="triceps" /> Triceps</label>
+      </div>
+
+      <!-- Other filter sections remain unchanged -->
+      </div>
+    </div>
+
+    <script>
+      document.querySelectorAll('.filter-checkbox').forEach(checkbox => {
+      checkbox.addEventListener('change', () => {
+        const selectedFilters = Array.from(document.querySelectorAll('.filter-checkbox:checked'))
+        .map(cb => cb.dataset.filter);
+
+        // Assuming you have a function `filterResults` to handle the filtering logic
+        filterResults(selectedFilters);
+      });
+      });
+
+      function filterResults(filters) {
+      const thumbnails = document.querySelectorAll('#thumbnail-container .thumbnail-item'); // Adjust selector as needed
+      thumbnails.forEach(thumbnail => {
+        const tags = thumbnail.dataset.tags.split(','); // Assuming each thumbnail has a `data-tags` attribute
+        const matches = filters.every(filter => tags.includes(filter));
+        thumbnail.style.display = matches ? 'block' : 'none';
+      });
+      }
+    </script>
   </body>
 </html>

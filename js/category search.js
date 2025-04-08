@@ -1,3 +1,4 @@
+// Function to fetch workout data from JSON file
 async function fetchWorkoutData() {
   try {
     const response = await fetch("../data/exercises.json");
@@ -8,13 +9,13 @@ async function fetchWorkoutData() {
     return [];
   }
 }
-
+// Function to create a thumbnail element for each workout
 function createThumbnail(workout) {
   const thumbnail = document.createElement("div");
   thumbnail.classList.add("thumbnail");
 
   const img = document.createElement("img");
-  img.src = `http://127.0.0.1:5500/data/images/${workout.images[0]}`;
+  img.src = `http://127.0.0.1:5500/data/images/${workout.images[1]}`;
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
 
@@ -79,13 +80,15 @@ function createThumbnail(workout) {
   thumbnail.appendChild(img);
   thumbnail.appendChild(infoDiv);
   thumbnail.appendChild(pinDiv);
-
+  // Add event listeners for thumbnail and pin button
   thumbnail.addEventListener("click", function () {
     localStorage.setItem("selectedWorkout", JSON.stringify(workout));
     window.location.href = "info-page.html";
   });
-
-  pinBtn.addEventListener("click", function () {
+  // Add event listener for pin button
+  pinBtn.addEventListener("click", function (event) {
+    // Added event parameter to prevent propagation
+    // to prevent the thumbnail click event from firing
     event.stopPropagation();
     if (pinImg.src.includes(deactivatedSrc)) {
       pinImg.src = activatedSrc; // Change to activated pin
@@ -117,20 +120,19 @@ function removeFromPinnedWorkouts(workoutId) {
   pinnedWorkouts = pinnedWorkouts.filter((workout) => workout.id !== workoutId);
   localStorage.setItem("pinnedWorkouts", JSON.stringify(pinnedWorkouts));
 }
-
+// Function to load thumbnails into the container
 function loadThumbnails(workouts) {
   const container = document.getElementById("thumbnail-container");
   container.innerHTML = "";
 
-  const limitedWorkouts = workouts.slice(0, 30);
+  const limitedWorkouts = workouts.slice(0, 39);
 
   limitedWorkouts.forEach((workout) => {
     const thumbnail = createThumbnail(workout);
     container.appendChild(thumbnail);
   });
 }
-
-// Attach event listeners to buttons
+// Category Slider Functionality
 document.querySelectorAll(".category-btn").forEach((button) => {
   button.addEventListener("click", async function () {
     let category = this.getAttribute("data-value");

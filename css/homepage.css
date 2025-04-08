@@ -1,11 +1,16 @@
-body {
+html {
+  scroll-padding-top: 80px; /* Adjust based on header height */
+}
+body,
+html {
   font-family: "Oswald", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #111111;
+  background-color: white;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  padding: 0;
 }
 .nav-container {
   padding-right: 120px;

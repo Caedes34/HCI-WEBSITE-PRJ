@@ -11,10 +11,12 @@
     <link rel="stylesheet" href="thumbnails.css" />
     <link rel="stylesheet" href="css/search-bar.css" />
     <link rel="stylesheet" href="css/filter.css" />
+
+    <script src="js/checkbox logic.js" defer></script>
     <script src="js/filter.js" defer></script>
     <!-- <script src="js/results.js" defer></script> -->
-    <script src="js/category.js" defer></script>
-    <script src="js/dynamically.js" defer></script>
+    <script src="js/category slider func.js" defer></script>
+    <script src="js/category search.js" defer></script>
     <script src="js/search.js" defer></script>
   </head>
   <body>
@@ -40,7 +42,7 @@
       </nav>
     </header>
 
-    <section>
+    <section class="CATEG_CONTAIN">
       <div class="category-container">
         <button id="prevBtn" class="nav-btn">
           <img src="images/PREV BUTTON.png" />
@@ -50,7 +52,7 @@
             <button
               class="category-btn"
               id="search-button-cardio"
-              data-value="stretching">
+              data-value="cardio">
               <img src="images/Cardio Category.png " alt="cardio-category" />
             </button>
             <button
@@ -126,7 +128,6 @@
       <button type="submit" class="search-button" id="search-button">🔍</button>
     </div>
 
-    <!-- Sidebar -->
     <div class="filter-backgroundcolor">
       <div class="filter-container">
         <h2>Filters</h2>
@@ -135,8 +136,14 @@
           <span>Primary Muscle</span> <span>▼</span>
         </div>
         <div id="bodyFocus" class="dropdown-content">
-          <label><input type="checkbox" /> Abdominals</label>
-          <label><input type="checkbox" /> Abductors</label>
+          <label
+            ><input type="checkbox" value="abdominals" class="body-checkbox" />
+            Abdominals</label
+          >
+          <label
+            ><input type="checkbox" value="abductors" class="body-checkbox" />
+            Abductors</label
+          >
           <label><input type="checkbox" /> Adductors</label>
           <label><input type="checkbox" /> Biceps</label>
           <label><input type="checkbox" /> Calves</label>
@@ -157,7 +164,7 @@
           <span>Force</span> <span>▼</span>
         </div>
         <div id="force" class="dropdown-content">
-          <label><input type="checkbox" /> Static</label>
+          <label><input type="checkbox" value="static" /> Static</label>
           <label><input type="checkbox" /> Pull</label>
           <label><input type="checkbox" /> Push</label>
         </div>
@@ -212,7 +219,7 @@
     </div>
 
     <!--CONTENTS-->
-    <div id="result-header">Results:</div>
+    <!-- <div id="result-header">Results:</div> -->
     <div id="thumbnail-container" class="Thumbnail-SET-1"></div>
 
     <!--CONTENTS ENDS HERE-->

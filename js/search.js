@@ -1,3 +1,4 @@
+//SEARCH FUNCTION
 document.addEventListener("DOMContentLoaded", async function () {
   const urlParams = new URLSearchParams(window.location.search);
   const searchQuery = urlParams.get("query");
@@ -9,7 +10,16 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   const searchButton = document.getElementById("search-button");
   const searchInput = document.getElementById("search-input");
-
+  //search button functionality and add for when user press enter on keyboard
+  searchInput.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      const query = searchInput.value.trim();
+      if (query) {
+        window.location.search = `?query=${encodeURIComponent(query)}`;
+      }
+    }
+  });
   searchButton.addEventListener("click", function (event) {
     event.preventDefault();
 
@@ -58,12 +68,15 @@ document.addEventListener("DOMContentLoaded", async function () {
     thumbnail.classList.add("thumbnail");
 
     const img = document.createElement("img");
-    img.src = `http://127.0.0.1:5500/data/images/${workout.images[0]}`;
+    img.src = `http://127.0.0.1:5500/data/images/${workout.images[1]}`;
     img.alt = "Thumbnail";
     img.classList.add("thumbnail-image");
 
     const infoDiv = document.createElement("div");
     infoDiv.classList.add("thumbnail-info");
+
+    const separator = document.createElement("hr");
+    separator.classList.add("thumbnail-separator");
 
     const tagsDiv = document.createElement("div");
     tagsDiv.classList.add("thumbnail-tags");
@@ -73,11 +86,13 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     const pinBtn = document.createElement("button");
     pinBtn.classList.add("pin-button");
-    pinBtn.setAttribute("data-id", workout.id);
 
     const pinImg = document.createElement("img");
-    pinImg.src = "images/PIN.png";
-    pinImg.alt = "PIN ICON";
+    pinImg.src = "images/deactivated-pin.png";
+    pinImg.alt = "pin-icon";
+
+    const deactivatedSrc = "images/deactivated-pin.png";
+    const activatedSrc = "images/activated-pin.png";
 
     pinBtn.appendChild(pinImg);
     pinDiv.appendChild(pinBtn);
@@ -112,6 +127,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     infoDiv.appendChild(title);
     infoDiv.appendChild(difficultySpan);
+    infoDiv.appendChild(separator);
     infoDiv.appendChild(tagsDiv);
     infoDiv.appendChild(metaDiv);
     thumbnail.appendChild(img);
@@ -119,25 +135,38 @@ document.addEventListener("DOMContentLoaded", async function () {
     thumbnail.appendChild(pinDiv);
 
     // Handle click for detailed page navigation
+
+    // Add event listeners for thumbnail and pin button
     thumbnail.addEventListener("click", function () {
       localStorage.setItem("selectedWorkout", JSON.stringify(workout));
       window.location.href = "info-page.html";
     });
+    // Add event listener for pin button
+    pinBtn.addEventListener("click", function (event) {
+      // Added event parameter to prevent propagation
+      // to prevent the thumbnail click event from firing
+      event.stopPropagation();
+      if (pinImg.src.includes(deactivatedSrc)) {
+        pinImg.src = activatedSrc; // Change to activated pin
+        addToPinnedWorkouts(workout); // Save to localStorage
+      } else {
+        pinImg.src = deactivatedSrc; // Change to deactivated pin
+        removeFromPinnedWorkouts(workout.id); // Remove from localStorage
+      }
+    });
 
     return thumbnail;
   }
-
+  // Load thumbnails into the container
   function loadThumbnails(workouts) {
     const container = document.getElementById("thumbnail-container");
     container.innerHTML = "";
 
-    workouts.forEach((workout) => {
+    const limitedWorkouts = workouts.slice(0, 9);
+
+    limitedWorkouts.forEach((workout) => {
       const thumbnail = createThumbnail(workout);
       container.appendChild(thumbnail);
     });
-  }
-
-  if (workoutName) {
-    fetchWorkoutData(workoutName).then(loadThumbnails);
   }
 });

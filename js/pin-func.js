@@ -1,3 +1,4 @@
+// LOADS THE PINNED WORKOUTS FROM LOCAL STORAGE AND DISPLAYS THEM ON THE PAGE
 document.addEventListener("DOMContentLoaded", async () => {
   const pinnedWorkouts =
     JSON.parse(localStorage.getItem("pinnedWorkouts")) || [];

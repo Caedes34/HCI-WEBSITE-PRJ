@@ -1,3 +1,4 @@
+// CALCULATOR LOGICS
 document.addEventListener("DOMContentLoaded", function () {
   var age = document.getElementById("age");
   var height = document.getElementById("height");

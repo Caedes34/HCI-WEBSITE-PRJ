@@ -1,3 +1,4 @@
+// Category Slider Functionality
 const categories = document.querySelector(".categories");
 const nextBtn = document.getElementById("nextBtn");
 const prevBtn = document.getElementById("prevBtn");
