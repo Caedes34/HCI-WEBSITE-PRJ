@@ -42,3 +42,18 @@
 .dropdown-content.active {
   display: block;
 }
+
+@media (max-width: 480px) {
+  .filter-container {
+    width: 100%;
+    height: auto; /* Adjust height for smaller screens */
+    padding: 10px;
+    top: 5; /* Positions it at the top of the screen */
+    box-shadow: none; /* Removes shadow for a cleaner look */
+  }
+
+  .filter-item {
+    flex-direction: column; /* Stacks items vertically on small screens */
+    align-items: flex-start; /* Aligns items to the start */
+  }
+}

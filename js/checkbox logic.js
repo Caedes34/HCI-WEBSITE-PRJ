@@ -14,7 +14,7 @@ function createThumbnail(workout) {
   thumbnail.classList.add("thumbnail");
 
   const img = document.createElement("img");
-  img.src = `http://127.0.0.1:5500/data/images/${workout.images[0]}`;
+  img.src = `http://127.0.0.1:5500/data/images/${workout.images[1]}`;
   img.alt = "Thumbnail";
   img.classList.add("thumbnail-image");
 
@@ -129,29 +129,77 @@ function loadThumbnails(workouts) {
   });
 }
 
-document.querySelectorAll(".body-checkbox").forEach((checkbox) => {
-  checkbox.addEventListener("change", async () => {
-    const selectedValues = Array.from(
-      document.querySelectorAll(".body-checkbox:checked")
-    ).map((cb) => cb.value);
+document
+  .querySelectorAll(
+    ".body-checkbox-primaryMuscle, .body-checkbox-level, .body-checkbox-equipment, .body-checkbox-category, .body-checkbox-force, .body-checkbox-mechanic"
+  )
+  .forEach((checkbox) => {
+    checkbox.addEventListener("change", async () => {
+      // Collect selected values for each checkbox (primaryMuscles, level, etc.)
+      const selectedPrimaryMuscles = Array.from(
+        document.querySelectorAll(".body-checkbox-primaryMuscle:checked")
+      ).map((cb) => cb.value);
 
-    console.log("Selected values: ", selectedValues);
+      const selectedLevels = Array.from(
+        document.querySelectorAll(".body-checkbox-level:checked")
+      ).map((cb) => cb.value);
 
-    const workouts = await fetchWorkoutData();
+      const selectedForce = Array.from(
+        document.querySelectorAll(".body-checkbox-force:checked")
+      ).map((cb) => cb.value);
 
-    const filteredWorkouts =
-      selectedValues.length > 0
-        ? workouts.filter((workout) =>
-            selectedValues.includes(workout.primaryMuscles)
-          )
-        : workouts;
+      const selectedMechanic = Array.from(
+        document.querySelectorAll(".body-checkbox-mechanic:checked")
+      ).map((cb) => cb.value);
 
-    console.log("Filtered workouts: ", filteredWorkouts);
+      const selectedEquipment = Array.from(
+        document.querySelectorAll(".body-checkbox-equipment:checked")
+      ).map((cb) => cb.value);
 
-    if (filteredWorkouts.length === 0) {
-      console.log("No workouts found for the selected filters.");
-    }
+      const selectedCategories = Array.from(
+        document.querySelectorAll(".body-checkbox-category:checked")
+      ).map((cb) => cb.value);
 
-    loadThumbnails(filteredWorkouts);
+      console.log("Selected values: ", {
+        selectedPrimaryMuscles,
+        selectedCategories,
+        selectedLevels,
+        selectedEquipment,
+        selectedForce,
+        selectedMechanic,
+      });
+
+      const workouts = await fetchWorkoutData();
+
+      const filteredWorkouts = workouts.filter((workout) => {
+        const matchesPrimaryMuscles =
+          selectedPrimaryMuscles.length === 0 ||
+          workout.primaryMuscles.some((muscle) =>
+            selectedPrimaryMuscles.includes(muscle)
+          );
+        const matchesCategory =
+          selectedCategories.length === 0 ||
+          selectedCategories.includes(workout.category);
+        const matchesLevel =
+          selectedLevels.length === 0 || selectedLevels.includes(workout.level);
+        const matchesEquipment =
+          selectedEquipment.length === 0 ||
+          selectedEquipment.includes(workout.equipment);
+        const matchesForce =
+          selectedForce.length === 0 || selectedForce.includes(workout.force);
+        const matchesMechanic =
+          selectedMechanic.length === 0 ||
+          selectedMechanic.includes(workout.mechanic);
+
+        return (
+          matchesPrimaryMuscles &&
+          matchesLevel &&
+          matchesEquipment &&
+          matchesCategory &&
+          matchesForce &&
+          matchesMechanic
+        );
+      });
+      loadThumbnails(filteredWorkouts);
+    });
   });
-});

@@ -217,10 +217,10 @@
     justify-content: center;
     background-color: gainsboro;
     align-items: start;
-    width: 412px;
+    width: 100%;
     bottom: 225px; /* Adjust this value to match the height of your header */
     margin-left: auto;
-    margin-right: 17px;
+    margin-right: 0;
     margin-top: 10px; /* Adds space above the container */
     margin-bottom: 10px; /* Adds space below the container */
     padding: 10px;
