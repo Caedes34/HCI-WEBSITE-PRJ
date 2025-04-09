@@ -85,7 +85,7 @@ function createThumbnail(workout) {
     window.location.href = "info-page.html";
   });
 
-  pinBtn.addEventListener("click", function () {
+  pinBtn.addEventListener("click", function (event) {
     event.stopPropagation();
     if (pinImg.src.includes(deactivatedSrc)) {
       pinImg.src = activatedSrc; // Change to activated pin
