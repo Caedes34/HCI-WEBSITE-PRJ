@@ -1,6 +1,6 @@
 .filter-container {
   position: absolute;
-  top: 51.7%; /* Positions container 10% from top */
+  top: 57%; /* Positions container 10% from top */
   margin-left: 74px;
   width: 285px;
   height: 80vh; /* Leaves some space at the bottom */

@@ -1,4 +1,15 @@
 // Function to fetch workout data from JSON file
+
+// Initial random fetch (optional, can be removed)
+document.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const defaultWorkouts = await fetchWorkoutData(category); // Default category
+    loadThumbnails(defaultWorkouts);
+  } catch (error) {
+    console.error("Error loading default workouts", error);
+  }
+});
+
 async function fetchWorkoutData() {
   try {
     const response = await fetch("../data/exercises.json");
@@ -148,14 +159,4 @@ document.querySelectorAll(".category-btn").forEach((button) => {
       console.error("Error loading workouts", error);
     }
   });
-});
-
-// Initial random fetch (optional, can be removed)
-document.addEventListener("DOMContentLoaded", async () => {
-  try {
-    const defaultWorkouts = await fetchWorkoutData(category); // Default category
-    loadThumbnails(defaultWorkouts);
-  } catch (error) {
-    console.error("Error loading default workouts", error);
-  }
 });

@@ -33,13 +33,12 @@
   justify-content: center;
   background-color: gainsboro;
   align-items: start;
-  width: 1138px;
+  width: 1100px;
   margin-left: auto;
-  margin-right: 17px;
-  top: -85px;
+  top: 1px;
   padding: 10px;
   padding-left: 50px; /* Optional: Adds space inside */
-  transform: scale(0.9);
+  transform: none;
   box-sizing: border-box; /* Ensures padding does not affect total width/height */
 }
 
