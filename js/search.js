@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const container = document.getElementById("thumbnail-container");
     container.innerHTML = "";
 
-    const limitedWorkouts = workouts.slice(0, 9);
+    const limitedWorkouts = workouts.slice(0, 30);
 
     limitedWorkouts.forEach((workout) => {
       const thumbnail = createThumbnail(workout);
