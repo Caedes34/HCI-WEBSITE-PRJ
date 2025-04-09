@@ -124,6 +124,11 @@
 
           container.appendChild(thumbnail);
 
+          thumbnail.addEventListener("click", function () {
+            localStorage.setItem("selectedWorkout", JSON.stringify(workout));
+            window.location.href = "info-page.html";
+          });
+
           pinBtn.addEventListener("click", function () {
             if (pinImg.src.includes(deactivatedSrc)) {
               pinImg.src = activatedSrc;

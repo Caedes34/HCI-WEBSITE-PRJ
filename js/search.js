@@ -162,6 +162,19 @@ document.addEventListener("DOMContentLoaded", async function () {
     const container = document.getElementById("thumbnail-container");
     container.innerHTML = "";
 
+    //logic to show if input is empty or no results have been found
+
+    if (workouts.length === 0) {
+      const urlParams = new URLSearchParams(window.location.search);
+      const searchQuery = urlParams.get("query");
+      const noResultsMessage = document.createElement("div");
+      noResultsMessage.classList.add("no-results-message");
+      noResultsMessage.textContent = `No results found for "${searchQuery}"`;
+      container.appendChild(noResultsMessage);
+      return;
+    }
+
+    //limit results to 30
     const limitedWorkouts = workouts.slice(0, 30);
 
     limitedWorkouts.forEach((workout) => {

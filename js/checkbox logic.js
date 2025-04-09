@@ -129,6 +129,8 @@ function loadThumbnails(workouts) {
   });
 }
 
+// Event listener for checkboxes
+// This function will be called when any checkbox changes stateno-results-message
 document
   .querySelectorAll(
     ".body-checkbox-primaryMuscle, .body-checkbox-level, .body-checkbox-equipment, .body-checkbox-category, .body-checkbox-force, .body-checkbox-mechanic"
