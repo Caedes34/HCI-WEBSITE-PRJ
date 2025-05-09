@@ -1,3 +1,7 @@
+
+// This function fetches workout data from a JSON file
+// and loads the thumbnails into the container
+// It also handles the checkbox filtering logic
 async function fetchWorkoutData() {
   try {
     const response = await fetch("../data/exercises.json");
@@ -8,7 +12,8 @@ async function fetchWorkoutData() {
     return [];
   }
 }
-
+// Function to create a thumbnail element for each workout
+// This function creates a thumbnail for each workout and adds event listeners for click and pin actions
 function createThumbnail(workout) {
   const thumbnail = document.createElement("div");
   thumbnail.classList.add("thumbnail");
@@ -79,7 +84,12 @@ function createThumbnail(workout) {
   thumbnail.appendChild(img);
   thumbnail.appendChild(infoDiv);
   thumbnail.appendChild(pinDiv);
+  
 
+
+
+  // Add event listeners for thumbnail click and pin button click
+  // Handle click for detailed page navigation
   thumbnail.addEventListener("click", function () {
     localStorage.setItem("selectedWorkout", JSON.stringify(workout));
     window.location.href = "info-page.html";
@@ -131,6 +141,8 @@ function loadThumbnails(workouts) {
 
 // Event listener for checkboxes
 // This function will be called when any checkbox changes stateno-results-message
+// It collects the selected values from all checkboxes and filters the workouts accordingly
+// It then loads the filtered workouts into the thumbnail container
 document
   .querySelectorAll(
     ".body-checkbox-primaryMuscle, .body-checkbox-level, .body-checkbox-equipment, .body-checkbox-category, .body-checkbox-force, .body-checkbox-mechanic"

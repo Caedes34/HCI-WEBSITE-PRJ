@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", async function () {
     const workouts = await fetchWorkoutData(searchQuery);
     loadThumbnails(workouts);
   }
-
+  
   const searchButton = document.getElementById("search-button");
   const searchInput = document.getElementById("search-input");
   //search button functionality and add for when user press enter on keyboard

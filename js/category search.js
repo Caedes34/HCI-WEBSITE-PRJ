@@ -115,9 +115,11 @@ function createThumbnail(workout) {
 
 // Function to add workout to pinned list in localStorage
 function addToPinnedWorkouts(workout) {
+  //
   let pinnedWorkouts = JSON.parse(localStorage.getItem("pinnedWorkouts")) || [];
 
   // Add workout if it's not already in pinned workouts
+  // Check if the workout is already pinned
   if (!pinnedWorkouts.some((pinned) => pinned.id === workout.id)) {
     pinnedWorkouts.push(workout);
     localStorage.setItem("pinnedWorkouts", JSON.stringify(pinnedWorkouts));
@@ -128,6 +130,7 @@ function addToPinnedWorkouts(workout) {
 function removeFromPinnedWorkouts(workoutId) {
   let pinnedWorkouts = JSON.parse(localStorage.getItem("pinnedWorkouts")) || [];
 
+  // Remove workout from pinned workouts
   pinnedWorkouts = pinnedWorkouts.filter((workout) => workout.id !== workoutId);
   localStorage.setItem("pinnedWorkouts", JSON.stringify(pinnedWorkouts));
 }
